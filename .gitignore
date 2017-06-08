@@ -50,3 +50,12 @@ md-data/
 
 # pycharm directory
 .idea
+
+# ipynb checkpoints
+.ipynb_checkpoints
+
+# vscode
+.vscode
+
+# pickles
+.pickle
