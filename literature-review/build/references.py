@@ -45,7 +45,7 @@ def get_divider(title='Error', linewidth=79, fill_character='#'):
 stats = collections.OrderedDict()
 
 # Configure directories
-ref_dir = pathlib.Path('../references')
+ref_dir = pathlib.Path('../literature-review/references')
 gen_dir = ref_dir.joinpath('generated')
 gen_dir.mkdir(exist_ok=True)
 
