@@ -15,7 +15,7 @@ as the "publicly" available version of the code.
   - `explorations` for files from `nonequilibrium/nonequilibrium-explorations`.
   These contain notebooks for PDB searching and achiral to chiral transitions.
   - `md-data` for the raw simulation data (excluding trajectories, which are stored in `large-file-storage` on Kirkwood and GPFS).
-  - `code` filled with `nonequilibrium/code/SG-model-v2` copied with `rsync -au`.
+  - `code` filled with `nonequilibrium/code/SG-model-v2`, `nonequilibrium/code/torsion-individual`, and `nonequilibrium/code/torque-scans` copied with `rsync -au`.
 
 Now, there needs to be a good way to store the code. There is code from the manuscript, and code from just before making the manuscript, and then much older code.
 

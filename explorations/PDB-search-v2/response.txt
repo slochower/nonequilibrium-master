@@ -1,0 +1,956 @@
+ID   A0A0B6XLD6_STAAU        Unreviewed;       657 AA.
+AC   A0A0B6XLD6;
+DT   01-APR-2015, integrated into UniProtKB/TrEMBL.
+DT   01-APR-2015, sequence version 1.
+DT   07-SEP-2016, entry version 17.
+DE   RecName: Full=Methionine--tRNA ligase {ECO:0000256|HAMAP-Rule:MF_01228, ECO:0000256|SAAS:SAAS00252424};
+DE            EC=6.1.1.10 {ECO:0000256|HAMAP-Rule:MF_01228, ECO:0000256|SAAS:SAAS00252424};
+DE   AltName: Full=Methionyl-tRNA synthetase {ECO:0000256|HAMAP-Rule:MF_01228};
+GN   Name=metS_2 {ECO:0000313|EMBL:CXT66206.1};
+GN   Synonyms=metG {ECO:0000256|HAMAP-Rule:MF_01228};
+GN   ORFNames=ERS072952_02218 {ECO:0000313|EMBL:CXP96047.1},
+GN   ERS073147_02489 {ECO:0000313|EMBL:CXT66206.1},
+GN   ERS073767_02339 {ECO:0000313|EMBL:CYD49959.1},
+GN   ERS073814_02553 {ECO:0000313|EMBL:CYE23259.1};
+OS   Staphylococcus aureus.
+OC   Bacteria; Firmicutes; Bacilli; Bacillales; Staphylococcaceae;
+OC   Staphylococcus.
+OX   NCBI_TaxID=1280 {ECO:0000313|EMBL:CXT66206.1, ECO:0000313|Proteomes:UP000074953};
+RN   [1] {ECO:0000213|PDB:4QRD, ECO:0000213|PDB:4QRE}
+RP   X-RAY CRYSTALLOGRAPHY (1.70 ANGSTROMS) OF 1-520.
+RA   Li X., Hilgers M.T., Stidham M., Brown-Driver V., Shaw K.J., Finn J.;
+RT   "Discovery and SAR of a Novel Series of Pyrimidine Antibacterials
+RT   Targeting Methionyl-tRNA Synthetase.";
+RL   Submitted (JUN-2014) to the PDB data bank.
+RN   [2] {ECO:0000313|Proteomes:UP000073954, ECO:0000313|Proteomes:UP000074953, ECO:0000313|Proteomes:UP000075156}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=st113 {ECO:0000313|Proteomes:UP000075156},
+RC   St113 {ECO:0000313|EMBL:CYD49959.1},
+RC   st1443 {ECO:0000313|Proteomes:UP000074953},
+RC   St1443 {ECO:0000313|EMBL:CXT66206.1},
+RC   St1666 {ECO:0000313|EMBL:CYE23259.1},
+RC   st1666 {ECO:0000313|Proteomes:UP000073954},
+RC   st937 {ECO:0000313|Proteomes:UP000075166}, and
+RC   St937 {ECO:0000313|EMBL:CXP96047.1};
+RG   Pathogen Informatics;
+RL   Submitted (FEB-2016) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Is required not only for elongation of protein synthesis
+CC       but also for the initiation of all mRNA translation through
+CC       initiator tRNA(fMet) aminoacylation. {ECO:0000256|HAMAP-
+CC       Rule:MF_01228, ECO:0000256|SAAS:SAAS00044467}.
+CC   -!- CATALYTIC ACTIVITY: ATP + L-methionine + tRNA(Met) = AMP +
+CC       diphosphate + L-methionyl-tRNA(Met). {ECO:0000256|HAMAP-
+CC       Rule:MF_01228, ECO:0000256|SAAS:SAAS00252038}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000256|SAAS:SAAS00226982}.
+CC   -!- SUBUNIT: Monomer. {ECO:0000256|HAMAP-Rule:MF_01228}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000256|HAMAP-Rule:MF_01228,
+CC       ECO:0000256|SAAS:SAAS00578164}.
+CC   -!- SIMILARITY: Belongs to the class-I aminoacyl-tRNA synthetase
+CC       family. MetG type 2B subfamily. {ECO:0000256|HAMAP-Rule:MF_01228}.
+CC   -!- SIMILARITY: Contains 1 tRNA-binding domain. {ECO:0000256|HAMAP-
+CC       Rule:MF_01228}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; FGGX01000024; CXP96047.1; -; Genomic_DNA.
+DR   EMBL; FGLU01000020; CXT66206.1; -; Genomic_DNA.
+DR   EMBL; FHAW01000017; CYD49959.1; -; Genomic_DNA.
+DR   EMBL; FHCA01000019; CYE23259.1; -; Genomic_DNA.
+DR   RefSeq; WP_001051129.1; NZ_LT009690.1.
+DR   PDB; 4QRD; X-ray; 1.97 A; A=1-520.
+DR   PDB; 4QRE; X-ray; 1.70 A; A=1-520.
+DR   PDBsum; 4QRD; -.
+DR   PDBsum; 4QRE; -.
+DR   EnsemblBacteria; AKJ48340; AKJ48340; AA961_02225.
+DR   EnsemblBacteria; CEK43553; CEK43553; SASCBU26_00432.
+DR   EnsemblBacteria; CRE87497; CRE87497; ERS104630_02474.
+DR   EnsemblBacteria; CRE88122; CRE88122; ERS094548_02473.
+DR   EnsemblBacteria; KLM00368; KLM00368; RK60_01950.
+DR   EnsemblBacteria; KLM16651; KLM16651; RK75_00100.
+DR   EnsemblBacteria; KLM22979; KLM22979; RK77_04735.
+DR   EnsemblBacteria; KLM31655; KLM31655; RK74_04350.
+DR   EnsemblBacteria; KLM38092; KLM38092; RK72_06775.
+DR   EnsemblBacteria; KLM40359; KLM40359; RK67_01785.
+DR   EnsemblBacteria; KLM61678; KLM61678; RK83_05295.
+DR   EnsemblBacteria; KLM72296; KLM72296; RK84_03270.
+DR   EnsemblBacteria; KLM77076; KLM77076; RK92_00065.
+DR   EnsemblBacteria; KLM88740; KLM88740; RK98_03580.
+DR   EnsemblBacteria; KLN05809; KLN05809; RK96_04965.
+DR   EnsemblBacteria; KLN09774; KLN09774; RL06_09415.
+DR   EnsemblBacteria; KLN29915; KLN29915; RL05_09870.
+DR   EnsemblBacteria; KMY75320; KMY75320; TM61_01975.
+DR   EnsemblBacteria; KMY75675; KMY75675; TM59_02125.
+DR   EnsemblBacteria; KOQ15893; KOQ15893; ABW33_07130.
+DR   EnsemblBacteria; KQB70934; KQB70934; AL078_09555.
+DR   KEGG; saud:CH52_03385; -.
+DR   KO; K01874; -.
+DR   Proteomes; UP000073954; Unassembled WGS sequence.
+DR   Proteomes; UP000074953; Unassembled WGS sequence.
+DR   Proteomes; UP000075156; Unassembled WGS sequence.
+DR   Proteomes; UP000075166; Unassembled WGS sequence.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-HAMAP.
+DR   GO; GO:0004825; F:methionine-tRNA ligase activity; IEA:UniProtKB-HAMAP.
+DR   GO; GO:0000049; F:tRNA binding; IEA:UniProtKB-HAMAP.
+DR   GO; GO:0006431; P:methionyl-tRNA aminoacylation; IEA:UniProtKB-HAMAP.
+DR   Gene3D; 1.10.730.10; -; 1.
+DR   Gene3D; 2.40.50.140; -; 1.
+DR   Gene3D; 3.40.50.620; -; 2.
+DR   HAMAP; MF_01228; Met_tRNA_synth_type2; 1.
+DR   InterPro; IPR001412; aa-tRNA-synth_I_CS.
+DR   InterPro; IPR013155; M/V/L/I-tRNA-synth_anticd-bd.
+DR   InterPro; IPR004495; Met-tRNA-synth_bsu_C.
+DR   InterPro; IPR014758; Met-tRNA_synth.
+DR   InterPro; IPR023457; Met-tRNA_synth_2.
+DR   InterPro; IPR015413; Methionyl/Leucyl_tRNA_Synth.
+DR   InterPro; IPR012340; NA-bd_OB-fold.
+DR   InterPro; IPR014729; Rossmann-like_a/b/a_fold.
+DR   InterPro; IPR002547; tRNA-bd_dom.
+DR   InterPro; IPR009080; tRNAsynth_Ia_anticodon-bd.
+DR   Pfam; PF08264; Anticodon_1; 1.
+DR   Pfam; PF09334; tRNA-synt_1g; 1.
+DR   Pfam; PF01588; tRNA_bind; 1.
+DR   PRINTS; PR01041; TRNASYNTHMET.
+DR   SUPFAM; SSF47323; SSF47323; 1.
+DR   SUPFAM; SSF50249; SSF50249; 1.
+DR   TIGRFAMs; TIGR00398; metG; 1.
+DR   TIGRFAMs; TIGR00399; metG_C_term; 1.
+DR   PROSITE; PS00178; AA_TRNA_LIGASE_I; 1.
+DR   PROSITE; PS50886; TRBD; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure {ECO:0000213|PDB:4QRD, ECO:0000213|PDB:4QRE};
+KW   Aminoacyl-tRNA synthetase {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|RuleBase:RU363039, ECO:0000256|SAAS:SAAS00514506,
+KW   ECO:0000313|EMBL:CXT66206.1};
+KW   ATP-binding {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|RuleBase:RU363039, ECO:0000256|SAAS:SAAS00514403};
+KW   Complete proteome {ECO:0000313|Proteomes:UP000073954,
+KW   ECO:0000313|Proteomes:UP000074953, ECO:0000313|Proteomes:UP000075156,
+KW   ECO:0000313|Proteomes:UP000075166};
+KW   Cytoplasm {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|SAAS:SAAS00514420};
+KW   Ligase {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|RuleBase:RU363039, ECO:0000256|SAAS:SAAS00514506,
+KW   ECO:0000313|EMBL:CXT66206.1};
+KW   Nucleotide-binding {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|RuleBase:RU363039, ECO:0000256|SAAS:SAAS00514403};
+KW   Protein biosynthesis {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|RuleBase:RU363039, ECO:0000256|SAAS:SAAS00514398};
+KW   RNA-binding {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|SAAS:SAAS00514462};
+KW   tRNA-binding {ECO:0000256|HAMAP-Rule:MF_01228,
+KW   ECO:0000256|SAAS:SAAS00514462}.
+FT   MOTIF        13     23       "HIGH" region. {ECO:0000256|HAMAP-
+FT                                Rule:MF_01228}.
+FT   MOTIF       308    312       "KMSKS" region. {ECO:0000256|HAMAP-
+FT                                Rule:MF_01228}.
+FT   METAL       160    160       Zinc. {ECO:0000256|HAMAP-Rule:MF_01228}.
+SQ   SEQUENCE   657 AA;  74873 MW;  48C3CE9FE519D017 CRC64;
+     MAKETFYITT PIYYPSGNLH IGHAYSTVAG DVIARYKRMQ GYDVRYLTGT DEHGQKIQEK
+     AQKAGKTEIE YLDEMIAGIK QLWAKLEISN DDFIRTTEER HKHVVEQVFE RLLKQGDIYL
+     GEYEGWYSVP DETYYTESQL VDPQYENGKI IGGKSPDSGH EVELVKEESY FFNISKYTDR
+     LLEFYDQNPD FIQPPSRKNE MINNFIKPGL ADLAVSRTSF NWGVHVPSNP KHVVYVWIDA
+     LVNYISALGY LSDDESLFNK YWPADIHLMA KEIVRFHSII WPILLMALDL PLPKKVFAHG
+     WILMKDGKMS KSKGNVVDPN ILIDRYGLDA TRYYLMRELP FGSDGVFTPE AFVERTNFDL
+     ANDLGNLVNR TISMVNKYFD GELPAYQGPL HELDEEMEAM ALETVKSYTE SMESLQFSVA
+     LSTVWKFISR TNKYIDETTP WVLAKDDSQK DMLGNVMAHL VENIRYAAVL LRPFLTHAPK
+     EIFEQLNINN PQFMEFSSLE QYGVLTESIM VTGQPKPIFP RLDSEAEIAY IKESMQPPAT
+     EEEKEEIPSK PQIDIKDFDK VEIKAATIID AEHVKKSDKL LKIQVDLDSE QRQIVSGIAK
+     FYTPDDIIGK KVAVVTNLKP AKLMGQKSEG MILSAEKDGV LTLVSLPSAI PNGAVIK
+//
+ID   A0A0F6FJ34_BACTK        Unreviewed;       423 AA.
+AC   A0A0F6FJ34;
+DT   24-JUN-2015, integrated into UniProtKB/TrEMBL.
+DT   24-JUN-2015, sequence version 1.
+DT   08-JUN-2016, entry version 5.
+DE   SubName: Full=Uncharacterized protein {ECO:0000313|EMBL:AJK38361.1};
+GN   ORFNames=BG08_6706 {ECO:0000313|EMBL:AJK38361.1};
+OS   Bacillus thuringiensis subsp. kurstaki.
+OG   Plasmid unnamed4 {ECO:0000313|EMBL:AJK38361.1,
+OG   ECO:0000313|Proteomes:UP000031926}.
+OC   Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus;
+OC   Bacillus cereus group.
+OX   NCBI_TaxID=29339 {ECO:0000313|EMBL:AJK38361.1, ECO:0000313|Proteomes:UP000031926};
+RN   [1] {ECO:0000313|EMBL:AJK38361.1, ECO:0000313|Proteomes:UP000031926}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=HD 1 {ECO:0000313|EMBL:AJK38361.1};
+RX   PubMed=25931591;
+RA   Johnson S.L., Daligault H.E., Davenport K.W., Jaissle J., Frey K.G.,
+RA   Ladner J.T., Broomall S.M., Bishop-Lilly K.A., Bruce D.C.,
+RA   Gibbons H.S., Coyne S.R., Lo C.C., Meincke L., Munk A.C.,
+RA   Koroleva G.I., Rosenzweig C.N., Palacios G.F., Redden C.L.,
+RA   Minogue T.D., Chain P.S.;
+RT   "Complete genome sequences for 35 biothreat assay-relevant bacillus
+RT   species.";
+RL   Genome Announc. 3:0-0(2015).
+RN   [2] {ECO:0000213|PDB:4XE7, ECO:0000213|PDB:4XHN, ECO:0000213|PDB:4XHO}
+RP   X-RAY CRYSTALLOGRAPHY (2.00 ANGSTROMS).
+RA   Jiang S.M., Narita A., Popp D., Ghoshdastider U., Lee L.J.,
+RA   Srinivasan R., Balasubramanian M.K., Oda T., Koh F.J., Larsson M.,
+RA   Robinson R.C.;
+RT   "A novel plasmid-segregating actin-like protein from Bacillus
+RT   thuringiensis forms dynamically unstable tubules.";
+RL   Submitted (JAN-2015) to the PDB data bank.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; CP010001; AJK38361.1; -; Genomic_DNA.
+DR   RefSeq; WP_000230191.1; NZ_CP010001.1.
+DR   PDB; 4XE7; X-ray; 2.00 A; A=1-423.
+DR   PDB; 4XHN; X-ray; 2.60 A; A=1-423.
+DR   PDB; 4XHO; X-ray; 2.65 A; A=1-423.
+DR   PDB; 4XHP; X-ray; 3.20 A; A=1-423.
+DR   PDBsum; 4XE7; -.
+DR   PDBsum; 4XHN; -.
+DR   PDBsum; 4XHO; -.
+DR   PDBsum; 4XHP; -.
+DR   EnsemblBacteria; AJK38361; AJK38361; BG08_6706.
+DR   Proteomes; UP000031926; Plasmid unnamed4.
+PE   1: Evidence at protein level;
+KW   3D-structure {ECO:0000213|PDB:4XE7, ECO:0000213|PDB:4XHN,
+KW   ECO:0000213|PDB:4XHO, ECO:0000213|PDB:4XHP};
+KW   Complete proteome {ECO:0000313|Proteomes:UP000031926};
+KW   Plasmid {ECO:0000313|EMBL:AJK38361.1}.
+SQ   SEQUENCE   423 AA;  47474 MW;  3FEEC2CDC5BF7BF4 CRC64;
+     MVEQMLSKNM LLGGFDTGNI KAKISFLNEK GNIESFAIPT VIAEAPPAKI DLKSAPSKKN
+     DYVNEKDEDI ELLHVRIISN SLDGDARSRA WYVGAYAKDQ EDRQEPTVDE MGKTEDKFSQ
+     KNKKLHLIPL FTSMAVAAAR IGKEEVSVPF SGGMPIEDYK LRGEEQILEM LYGEHTVEFL
+     DGTYEGKKIK ITINDGTMNV EGVSSVLAIL FDIVNGEIVE VEGMDAEIGE SYAINDLGAG
+     TSDNAFFEDG ELNKKLSTNT DLGTNKYIDE ILKNIKERFM ENEILKSFMT DEIESPFKTR
+     EDFIQRLVMP EVEKMIEDDT YKPTFSVKWG PVKENVTDIV MDGMLKYAED QKASLMKFWF
+     KTNADKNIVV GGGVLFGYAG LRDLKEQDGF ILPKNIQESA YFTSRSYLIA NLLEQLNKEG
+     VEA
+//
+ID   A0A0H2VDX9_ECOL6        Unreviewed;       320 AA.
+AC   A0A0H2VDX9;
+DT   16-SEP-2015, integrated into UniProtKB/TrEMBL.
+DT   16-SEP-2015, sequence version 1.
+DT   07-SEP-2016, entry version 8.
+DE   SubName: Full=Uncharacterized protein {ECO:0000313|EMBL:AAN82454.1};
+GN   OrderedLocusNames=c4014 {ECO:0000313|EMBL:AAN82454.1};
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacteriales;
+OC   Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310 {ECO:0000313|EMBL:AAN82454.1, ECO:0000313|Proteomes:UP000001410};
+RN   [1] {ECO:0000313|EMBL:AAN82454.1, ECO:0000313|Proteomes:UP000001410}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC
+RC   {ECO:0000313|Proteomes:UP000001410};
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G.III., Redford P., Roesch P.,
+RA   Rasko D., Buckles E.L., Liou S.R., Boutin A., Hackett J., Stroud D.,
+RA   Mayhew G.F., Rose D.J., Zhou S., Schwartz D.C., Perna N.T.,
+RA   Mobley H.L., Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence
+RT   of uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+RN   [2] {ECO:0000213|PDB:3IQ0}
+RP   X-RAY CRYSTALLOGRAPHY (1.79 ANGSTROMS) OF 2-320.
+RA   Satyanarayana L., Burley S.K., Swaminathan S.;
+RT   "Crystal structure of a putative Ribokinase (II)in complex with ATP
+RT   and Mg+2 from E.coli.";
+RL   Submitted (AUG-2009) to the PDB data bank.
+RN   [3] {ECO:0000213|PDB:3K9E}
+RP   X-RAY CRYSTALLOGRAPHY (2.05 ANGSTROMS) OF 2-320.
+RA   Satyanarayana L., Burley S.K., Swaminathan S.;
+RT   "Crystal structure of a putative Ribokinase II (Apo Form) from
+RT   E.coli.";
+RL   Submitted (OCT-2009) to the PDB data bank.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AE014075; AAN82454.1; -; Genomic_DNA.
+DR   RefSeq; WP_000048611.1; NC_004431.1.
+DR   PDB; 3IQ0; X-ray; 1.79 A; A/B=2-320.
+DR   PDB; 3K9E; X-ray; 2.05 A; A/B=2-320.
+DR   PDBsum; 3IQ0; -.
+DR   PDBsum; 3K9E; -.
+DR   ProteinModelPortal; A0A0H2VDX9; -.
+DR   EnsemblBacteria; AAN82454; AAN82454; c4014.
+DR   KEGG; ecc:c4014; -.
+DR   OMA; IMTMGEI; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0016301; F:kinase activity; IEA:UniProtKB-KW.
+DR   Gene3D; 3.40.1190.20; -; 1.
+DR   InterPro; IPR011611; PfkB_dom.
+DR   InterPro; IPR029056; Ribokinase-like.
+DR   Pfam; PF00294; PfkB; 1.
+DR   SUPFAM; SSF53613; SSF53613; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure {ECO:0000213|PDB:3IQ0, ECO:0000213|PDB:3K9E};
+KW   Complete proteome {ECO:0000313|Proteomes:UP000001410};
+KW   Kinase {ECO:0000256|SAAS:SAAS00446051};
+KW   Transferase {ECO:0000256|SAAS:SAAS00446051}.
+FT   DOMAIN       34    296       PfkB. {ECO:0000259|Pfam:PF00294}.
+SQ   SEQUENCE   320 AA;  34832 MW;  F8D6245F195CC9D7 CRC64;
+     MSKVFTIGEI LVEIMASKIG QPFDQPGIWN GPYPSGAPAI FIDQVTRLGV PCGIISCVGN
+     DGFGDINIHR LAADGVDIRG ISVLPLEATG SAFVTYHNSG DRDFIFNIKN AACGKLSAQH
+     VDENILKDCT HFHIMGSSLF SFHMVDAVKK AVTIVKANGG VISFDPNIRK EMLDIPEMRD
+     ALHFVLELTD IYMPSEGEVL LLSPHSTPER AIAGFLEEGV KEVIVKRGNQ GASYYSANEQ
+     FHVESYPVEE VDPTGAGDCF GGAWIACRQL GFDAHRALQY ANACGALAVT RRGPMEGTSR
+     LMEIETFIQR HDMSIREAAQ
+//
+ID   VGRG1_VIBC3             Reviewed;        1095 AA.
+AC   A0A0H3AIG7;
+DT   14-OCT-2015, integrated into UniProtKB/Swiss-Prot.
+DT   16-SEP-2015, sequence version 1.
+DT   07-SEP-2016, entry version 7.
+DE   RecName: Full=Actin cross-linking toxin VgrG1 {ECO:0000305};
+DE            EC=6.3.2.- {ECO:0000305|PubMed:22898822};
+GN   Name=vgrG1 {ECO:0000303|PubMed:22898822};
+GN   Synonyms=vgrG-1 {ECO:0000312|EMBL:ABQ19866.1};
+GN   OrderedLocusNames=VC0395_A1026 {ECO:0000312|EMBL:ABQ19866.1};
+OS   Vibrio cholerae serotype O1 (strain ATCC 39541 / Classical Ogawa 395 /
+OS   O395).
+OC   Bacteria; Proteobacteria; Gammaproteobacteria; Vibrionales;
+OC   Vibrionaceae; Vibrio.
+OX   NCBI_TaxID=345073;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 39541 / Classical Ogawa 395 / O395
+RC   {ECO:0000312|Proteomes:UP000000249};
+RA   Heidelberg J.;
+RL   Submitted (MAR-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 39541 / Classical Ogawa 395 / O395;
+RX   PubMed=19115014; DOI=10.1371/journal.pone.0004053;
+RA   Feng L., Reeves P.R., Lan R., Ren Y., Gao C., Zhou Z., Ren Y.,
+RA   Cheng J., Wang W., Wang J., Qian W., Li D., Wang L.;
+RT   "A recalibrated molecular clock and independent origins for the
+RT   cholera pandemic clones.";
+RL   PLoS ONE 3:E4053-E4053(2008).
+RN   [3]
+RP   X-RAY CRYSTALLOGRAPHY (2.12 ANGSTROMS) OF 700-1095 IN COMPLEX WITH ATP
+RP   AND MAGNESIUM, FUNCTION, COFACTOR, SUBCELLULAR LOCATION, AND
+RP   MUTAGENESIS OF GLU-727.
+RX   PubMed=22898822; DOI=10.1074/jbc.M112.390153;
+RA   Durand E., Derrez E., Audoly G., Spinelli S., Ortiz-Lombardia M.,
+RA   Raoult D., Cascales E., Cambillau C.;
+RT   "Crystal structure of the VgrG1 actin cross-linking domain of the
+RT   Vibrio cholerae type VI secretion system.";
+RL   J. Biol. Chem. 287:38190-38199(2012).
+CC   -!- FUNCTION: Actin-directed toxin that catalyzes the covalent cross-
+CC       linking of host cytoplasmic monomeric actin. Mediates the cross-
+CC       link between 'Lys-50' of one monomer and 'Glu-270' of another
+CC       actin monomer, resulting in formation of highly toxic actin
+CC       oligomers that cause cell rounding (PubMed:22898822). The toxin
+CC       can be highly efficient at very low concentrations by acting on
+CC       formin homology family proteins: toxic actin oligomers bind with
+CC       high affinity to formins and adversely affect both nucleation and
+CC       elongation abilities of formins, causing their potent inhibition
+CC       in both profilin-dependent and independent manners (By
+CC       similarity). Acts as an acid--amino-acid ligase that transfers the
+CC       gamma-phosphoryl group of ATP to the 'Glu-270' actin residue,
+CC       resulting in the formation of an activated acyl phosphate
+CC       intermediate. This intermediate is further hydrolyzed and the
+CC       energy of hydrolysis is utilized for the formation of the amide
+CC       bond between actin subunits (By similarity).
+CC       {ECO:0000250|UniProtKB:Q9KS12, ECO:0000269|PubMed:22898822}.
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:22898822};
+CC       Note=Binds 2 Mg(2+) ions per subunit. Can also use Mn(2+) ions
+CC       instead of Mg(2+). {ECO:0000269|PubMed:22898822};
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000250|UniProtKB:Q9KS45}.
+CC       Host cytoplasm, host cytosol {ECO:0000269|PubMed:22898822}.
+CC       Note=Secreted via the type VI secretion system.
+CC       {ECO:0000250|UniProtKB:Q9KS45}.
+CC   -!- SIMILARITY: Contains 1 ACD (actin cross-linking) domain.
+CC       {ECO:0000255|PROSITE-ProRule:PRU01108}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; CP000627; ABQ19866.1; -; Genomic_DNA.
+DR   EMBL; CP001235; ACP09541.1; -; Genomic_DNA.
+DR   RefSeq; WP_000212118.1; NC_012582.1.
+DR   PDB; 4DTD; X-ray; 2.50 A; A=700-1095.
+DR   PDB; 4DTF; X-ray; 2.12 A; A=700-1095.
+DR   PDB; 4DTH; X-ray; 1.78 A; A=700-1095.
+DR   PDB; 4DTL; X-ray; 2.39 A; A=701-1095.
+DR   PDB; 4E1C; X-ray; 2.25 A; A=700-1095.
+DR   PDB; 4E1D; X-ray; 2.49 A; A=700-1095.
+DR   PDB; 4E1F; X-ray; 2.10 A; A=700-1095.
+DR   PDBsum; 4DTD; -.
+DR   PDBsum; 4DTF; -.
+DR   PDBsum; 4DTH; -.
+DR   PDBsum; 4DTL; -.
+DR   PDBsum; 4E1C; -.
+DR   PDBsum; 4E1D; -.
+DR   PDBsum; 4E1F; -.
+DR   ProteinModelPortal; A0A0H3AIG7; -.
+DR   EnsemblBacteria; ABQ19866; ABQ19866; VC0395_A1026.
+DR   EnsemblBacteria; ACP09541; ACP09541; VC395_1535.
+DR   KEGG; vco:VC0395_A1026; -.
+DR   KEGG; vcr:VC395_1535; -.
+DR   KO; K11904; -.
+DR   OMA; LIENDQF; -.
+DR   Proteomes; UP000000249; Chromosome 2.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0044164; C:host cell cytosol; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016881; F:acid-amino acid ligase activity; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IDA:UniProtKB.
+DR   GO; GO:0000287; F:magnesium ion binding; IDA:UniProtKB.
+DR   GO; GO:0030042; P:actin filament depolymerization; IDA:UniProtKB.
+DR   GO; GO:0090527; P:actin filament reorganization; IEA:InterPro.
+DR   GO; GO:0018153; P:isopeptide cross-linking via N6-(L-isoglutamyl)-L-lysine; IDA:UniProtKB.
+DR   GO; GO:0009405; P:pathogenesis; IEA:UniProtKB-KW.
+DR   Gene3D; 2.40.50.230; -; 1.
+DR   InterPro; IPR032074; ACD_dom.
+DR   InterPro; IPR006531; Gp5_N-like_dom.
+DR   InterPro; IPR017847; T6SS_RhsGE_Vgr_subset.
+DR   InterPro; IPR006533; T6SS_Vgr_RhsGE.
+DR   Pfam; PF16671; ACD; 1.
+DR   TIGRFAMs; TIGR01646; vgr_GE; 1.
+DR   TIGRFAMs; TIGR03361; VI_Rhs_Vgr; 1.
+DR   PROSITE; PS51772; ACD; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Complete proteome; Host cytoplasm; Ligase;
+KW   Magnesium; Metal-binding; Nucleotide-binding; Secreted; Toxin;
+KW   Virulence.
+FT   CHAIN         1   1095       Actin cross-linking toxin VgrG1.
+FT                                /FTId=PRO_0000434119.
+FT   DOMAIN      712   1095       ACD. {ECO:0000255|PROSITE-
+FT                                ProRule:PRU01108}.
+FT   NP_BIND     723    727       ATP. {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1C,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000244|PDB:4E1F,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   METAL       727    727       Magnesium 1; catalytic; for actin cross-
+FT                                linking activity. {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   METAL       727    727       Magnesium 2; catalytic; for actin cross-
+FT                                linking activity. {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   METAL       789    789       Magnesium 2; catalytic; for actin cross-
+FT                                linking activity. {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   METAL       873    873       Magnesium 1; catalytic; for actin cross-
+FT                                linking activity. {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   METAL      1050   1050       Magnesium 1; catalytic; for actin cross-
+FT                                linking activity. {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   BINDING     792    792       ATP; via carbonyl oxygen.
+FT                                {ECO:0000244|PDB:4DTF,
+FT                                ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4DTL,
+FT                                ECO:0000244|PDB:4E1C,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000244|PDB:4E1F,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   BINDING     979    979       ATP; via carbonyl oxygen.
+FT                                {ECO:0000244|PDB:4DTH,
+FT                                ECO:0000244|PDB:4E1D,
+FT                                ECO:0000269|PubMed:22898822}.
+FT   MUTAGEN     727    727       E->Q: Abolished actin cross-linking
+FT                                activity. {ECO:0000269|PubMed:22898822}.
+FT   STRAND      718    721       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      723    729       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      731    737       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      743    750       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      755    767       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       772    774       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      784    792       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       800    823       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      837    844       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      849    852       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      857    859       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       869    871       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      872    879       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       880    882       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       889    895       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       904    911       {ECO:0000244|PDB:4DTH}.
+FT   TURN        912    914       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       920    944       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       953    956       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      962    964       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       968    974       {ECO:0000244|PDB:4DTH}.
+FT   STRAND      975    978       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       982    988       {ECO:0000244|PDB:4DTH}.
+FT   HELIX       991   1006       {ECO:0000244|PDB:4DTH}.
+FT   HELIX      1011   1022       {ECO:0000244|PDB:4DTH}.
+FT   STRAND     1027   1030       {ECO:0000244|PDB:4DTH}.
+FT   STRAND     1036   1039       {ECO:0000244|PDB:4DTH}.
+FT   STRAND     1042   1053       {ECO:0000244|PDB:4DTH}.
+FT   HELIX      1056   1061       {ECO:0000244|PDB:4DTH}.
+SQ   SEQUENCE   1095 AA;  120779 MW;  3419E1AF253018FB CRC64;
+     MATLAYSIEV EGLEDETLVV RGFHGQESLS NSVFLGQACY GFRYEVQLAS RVSNLTAEQM
+     VDKRAELKLY RNSQLVQRVH GIVRAFSQGD IGHHHTFYQL TLVPALERLS LRHNSRIFQK
+     QTVPEILSIL LQEMGINDYA FALKRDGVQR EFCVQYRESD IDFLHRLAAE EGLVYSFVHE
+     AGKHTLYFSD ASDSLSKLPE PIPYNALVGG AIDTPYIHGL TYRTQAEVSE VQLKDYSFKK
+     PAYSFLQTVQ GTELDYQQTR YQHFDAPGRY KDDVNGAAFS QIRLDYLRRH AHTATGQSNE
+     PLLRAGYKFD LQEHLDPAMN RDWVVVSINH QGEQPQALQE DGGSGATTYS NQFSLIPGHL
+     HWRAEPQPKP QVDGPMIATV VGPEGEEIFC DEHGRVKIHF PWDRYSNGNE QSSCWVRVSQ
+     GWAGSQYGFI AIPRIGHEVI VEFLNGDPDQ PIITGRTYHA TNTPPYTLPE HKTKTVLRTE
+     THQGEGFNEL SFEDQAGKEQ IYLHAQKDFD GLIENDQFTQ IKHNQHLTVE WESREAVTGE
+     QVLSIEGSLH VKTGKVRVNE AGTEIHVKAG QKVVIEAGSE ITVKAGGSFV KVDPAGVHLS
+     GALVNLNSGG SAGSGSGFGG AMPALPGGLE PAVALAPPQT ISYQALLQAE QANVPAVKVC
+     PLAAQEATPA VNSITPPPPP PIAPPMAPPQ PIMNPQPTAN AQPNLGRSTK ATPDFPTHFP
+     KSSIGIENEL AGLVVAMPAN SAQKFGYVKS AQGDALFMLT KDMNQGSYQR PPSLQDGKNY
+     QNWQTHTVEL VSYPCEMDDK AAVETRKQAM LWLATHFTTH IDQSNHQPLA PIQSEDGRFV
+     IEITNAKHVI AAGNGISAES QGQTITMTPS GQQATVGVAA KGFGTSATPE LRLLESAPWY
+     QKSLKSQFAS LTSAENLDDK ELAANVFAYL TSIYLKTAEL AKKFGIYINE WDPMSEQITP
+     NANGLTDPKV KNAWEILPRT KPSKIVEILS KSDAKAVMKH IKPQLQSRYS ESLSKNVFQY
+     FQDGGEVAGH GINNATVGDK HSPELAILFE FRTVPNELQS YLPKTESTTK SEVKLLDQFD
+     PMKRKTVIQQ VESLV
+//
+ID   A0A0H3JRU9_STAAM        Unreviewed;      1150 AA.
+AC   A0A0H3JRU9;
+DT   16-SEP-2015, integrated into UniProtKB/TrEMBL.
+DT   16-SEP-2015, sequence version 1.
+DT   07-SEP-2016, entry version 10.
+DE   RecName: Full=Pyruvate carboxylase {ECO:0000256|PIRNR:PIRNR001594};
+DE            EC=6.4.1.1 {ECO:0000256|PIRNR:PIRNR001594};
+GN   Name=pycA {ECO:0000313|EMBL:BAB57276.1};
+GN   OrderedLocusNames=SAV1114 {ECO:0000313|EMBL:BAB57276.1};
+OS   Staphylococcus aureus (strain Mu50 / ATCC 700699).
+OC   Bacteria; Firmicutes; Bacilli; Bacillales; Staphylococcaceae;
+OC   Staphylococcus.
+OX   NCBI_TaxID=158878 {ECO:0000313|EMBL:BAB57276.1, ECO:0000313|Proteomes:UP000002481};
+RN   [1] {ECO:0000313|EMBL:BAB57276.1, ECO:0000313|Proteomes:UP000002481}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Mu50 / ATCC 700699 {ECO:0000313|Proteomes:UP000002481};
+RX   PubMed=11418146; DOI=10.1016/S0140-6736(00)04403-2;
+RA   Kuroda M., Ohta T., Uchiyama I., Baba T., Yuzawa H., Kobayashi I.,
+RA   Cui L., Oguchi A., Aoki K., Nagai Y., Lian J., Ito T., Kanamori M.,
+RA   Matsumaru H., Maruyama A., Murakami H., Hosoyama A., Mizutani-Ui Y.,
+RA   Takahashi N.K., Sawano T., Inoue R., Kaito C., Sekimizu K.,
+RA   Hirakawa H., Kuhara S., Goto S., Yabuzaki J., Kanehisa M.,
+RA   Yamashita A., Oshima K., Furuya K., Yoshino C., Shiba T., Hattori M.,
+RA   Ogasawara N., Hayashi H., Hiramatsu K.;
+RT   "Whole genome sequencing of meticillin-resistant Staphylococcus
+RT   aureus.";
+RL   Lancet 357:1225-1240(2001).
+RN   [2] {ECO:0000213|PDB:3BG5}
+RP   X-RAY CRYSTALLOGRAPHY (2.80 ANGSTROMS).
+RX   PubMed=18297087; DOI=10.1038/nsmb.1393;
+RA   Xiang S., Tong L.;
+RT   "Crystal structures of human and Staphylococcus aureus pyruvate
+RT   carboxylase and molecular insights into the carboxyltransfer
+RT   reaction.";
+RL   Nat. Struct. Mol. Biol. 15:295-302(2008).
+RN   [3] {ECO:0000213|PDB:3HB9, ECO:0000213|PDB:3HBL, ECO:0000213|PDB:3HO8}
+RP   X-RAY CRYSTALLOGRAPHY (2.71 ANGSTROMS).
+RX   PubMed=19523900; DOI=10.1016/j.str.2009.04.008;
+RA   Yu L.P., Xiang S., Lasso G., Gil D., Valle M., Tong L.;
+RT   "A symmetrical tetramer for S. aureus pyruvate carboxylase in complex
+RT   with coenzyme A.";
+RL   Structure 17:823-832(2009).
+RN   [4] {ECO:0000213|PDB:4HNT, ECO:0000213|PDB:4HNU, ECO:0000213|PDB:4HNV}
+RP   X-RAY CRYSTALLOGRAPHY (2.80 ANGSTROMS).
+RX   PubMed=23286247; DOI=10.1021/bi301294d;
+RA   Yu L.P., Chou C.Y., Choi P.H., Tong L.;
+RT   "Characterizing the importance of the biotin carboxylase domain dimer
+RT   for Staphylococcus aureus pyruvate carboxylase catalysis.";
+RL   Biochemistry 52:488-496(2013).
+CC   -!- FUNCTION: Catalyzes a 2-step reaction, involving the ATP-dependent
+CC       carboxylation of the covalently attached biotin in the first step
+CC       and the transfer of the carboxyl group to pyruvate in the second.
+CC       {ECO:0000256|PIRNR:PIRNR001594}.
+CC   -!- CATALYTIC ACTIVITY: ATP + pyruvate + HCO(3)(-) = ADP + phosphate +
+CC       oxaloacetate. {ECO:0000256|PIRNR:PIRNR001594}.
+CC   -!- COFACTOR:
+CC       Name=biotin; Xref=ChEBI:CHEBI:57586;
+CC         Evidence={ECO:0000256|PIRNR:PIRNR001594};
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; BA000017; BAB57276.1; -; Genomic_DNA.
+DR   RefSeq; WP_000809514.1; NC_002758.2.
+DR   PDB; 3BG5; X-ray; 2.80 A; A/B/C/D=1-1150.
+DR   PDB; 3HB9; X-ray; 2.90 A; A/B/C/D=1-1150.
+DR   PDB; 3HBL; X-ray; 2.71 A; A/B/C/D=1-1150.
+DR   PDB; 3HO8; X-ray; 2.90 A; A/B/C/D=1-1150.
+DR   PDB; 4HNT; X-ray; 2.80 A; A/B/C/D=1-1150.
+DR   PDB; 4HNU; X-ray; 3.00 A; A/B/C/D=1-1150.
+DR   PDB; 4HNV; X-ray; 2.80 A; A/B/C/D=1-1150.
+DR   PDBsum; 3BG5; -.
+DR   PDBsum; 3HB9; -.
+DR   PDBsum; 3HBL; -.
+DR   PDBsum; 3HO8; -.
+DR   PDBsum; 4HNT; -.
+DR   PDBsum; 4HNU; -.
+DR   PDBsum; 4HNV; -.
+DR   ProteinModelPortal; A0A0H3JRU9; -.
+DR   EnsemblBacteria; BAB57276; BAB57276; SAV1114.
+DR   KEGG; sav:SAV1114; -.
+DR   KO; K01958; -.
+DR   OMA; YAIQSRV; -.
+DR   PhylomeDB; A0A0H3JRU9; -.
+DR   Proteomes; UP000002481; Chromosome.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009374; F:biotin binding; IEA:InterPro.
+DR   GO; GO:0004075; F:biotin carboxylase activity; IEA:InterPro.
+DR   GO; GO:0003677; F:DNA binding; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004736; F:pyruvate carboxylase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   GO; GO:0006090; P:pyruvate metabolic process; IEA:InterPro.
+DR   Gene3D; 1.10.10.60; -; 1.
+DR   Gene3D; 3.20.20.70; -; 1.
+DR   Gene3D; 3.30.1490.20; -; 1.
+DR   Gene3D; 3.30.470.20; -; 1.
+DR   Gene3D; 3.40.50.20; -; 1.
+DR   InterPro; IPR013785; Aldolase_TIM.
+DR   InterPro; IPR011761; ATP-grasp.
+DR   InterPro; IPR013815; ATP_grasp_subdomain_1.
+DR   InterPro; IPR013816; ATP_grasp_subdomain_2.
+DR   InterPro; IPR005481; BC-like_N.
+DR   InterPro; IPR011764; Biotin_carboxylation_dom.
+DR   InterPro; IPR005482; Biotin_COase_C.
+DR   InterPro; IPR000089; Biotin_lipoyl.
+DR   InterPro; IPR003379; Carboxylase_cons_dom.
+DR   InterPro; IPR005479; CbamoylP_synth_lsu-like_ATP-bd.
+DR   InterPro; IPR009057; Homeodomain-like.
+DR   InterPro; IPR016185; PreATP-grasp_dom.
+DR   InterPro; IPR000891; PYR_CT.
+DR   InterPro; IPR005930; Pyruv_COase.
+DR   InterPro; IPR011054; Rudment_hybrid_motif.
+DR   InterPro; IPR011053; Single_hybrid_motif.
+DR   Pfam; PF02785; Biotin_carb_C; 1.
+DR   Pfam; PF00289; Biotin_carb_N; 1.
+DR   Pfam; PF00364; Biotin_lipoyl; 1.
+DR   Pfam; PF02786; CPSase_L_D2; 1.
+DR   Pfam; PF00682; HMGL-like; 1.
+DR   Pfam; PF02436; PYC_OADA; 1.
+DR   PIRSF; PIRSF001594; Pyruv_carbox; 1.
+DR   SMART; SM00878; Biotin_carb_C; 1.
+DR   SUPFAM; SSF51230; SSF51230; 1.
+DR   SUPFAM; SSF51246; SSF51246; 1.
+DR   SUPFAM; SSF52440; SSF52440; 1.
+DR   TIGRFAMs; TIGR01235; pyruv_carbox; 1.
+DR   PROSITE; PS50975; ATP_GRASP; 1.
+DR   PROSITE; PS50979; BC; 1.
+DR   PROSITE; PS50968; BIOTINYL_LIPOYL; 1.
+DR   PROSITE; PS00866; CPSASE_1; 1.
+DR   PROSITE; PS00867; CPSASE_2; 1.
+DR   PROSITE; PS50991; PYR_CT; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure {ECO:0000213|PDB:3BG5, ECO:0000213|PDB:3HB9,
+KW   ECO:0000213|PDB:3HBL, ECO:0000213|PDB:3HO8};
+KW   ATP-binding {ECO:0000256|PIRNR:PIRNR001594,
+KW   ECO:0000256|PIRSR:PIRSR001594-2};
+KW   Biotin {ECO:0000256|PIRNR:PIRNR001594};
+KW   Complete proteome {ECO:0000313|Proteomes:UP000002481};
+KW   Ligase {ECO:0000256|PIRNR:PIRNR001594};
+KW   Metal-binding {ECO:0000256|PIRSR:PIRSR001594-3};
+KW   Nucleotide-binding {ECO:0000256|PIRNR:PIRNR001594,
+KW   ECO:0000256|PIRSR:PIRSR001594-2};
+KW   Pyruvate {ECO:0000313|EMBL:BAB57276.1}.
+FT   DOMAIN        3    455       Biotin carboxylation.
+FT                                {ECO:0000259|PROSITE:PS50979}.
+FT   DOMAIN      123    319       ATP-grasp. {ECO:0000259|PROSITE:PS50975}.
+FT   DOMAIN      533    802       PYR_CT. {ECO:0000259|PROSITE:PS50991}.
+FT   DOMAIN     1071   1146       Lipoyl-binding.
+FT                                {ECO:0000259|PROSITE:PS50968}.
+FT   ACT_SITE    294    294       {ECO:0000256|PIRSR:PIRSR001594-1}.
+FT   METAL       542    542       Divalent metal cation.
+FT                                {ECO:0000256|PIRSR:PIRSR001594-3}.
+FT   METAL       712    712       Divalent metal cation; via carbamate
+FT                                group. {ECO:0000256|PIRSR:PIRSR001594-3}.
+FT   METAL       741    741       Divalent metal cation.
+FT                                {ECO:0000256|PIRSR:PIRSR001594-3}.
+FT   METAL       743    743       Divalent metal cation.
+FT                                {ECO:0000256|PIRSR:PIRSR001594-3}.
+FT   BINDING     119    119       ATP. {ECO:0000256|PIRSR:PIRSR001594-2}.
+FT   BINDING     203    203       ATP. {ECO:0000256|PIRSR:PIRSR001594-2}.
+FT   BINDING     238    238       ATP. {ECO:0000256|PIRSR:PIRSR001594-2}.
+FT   BINDING     614    614       Substrate.
+FT                                {ECO:0000256|PIRSR:PIRSR001594-2}.
+FT   BINDING     876    876       Substrate.
+FT                                {ECO:0000256|PIRSR:PIRSR001594-2}.
+SQ   SEQUENCE   1150 AA;  128558 MW;  2C8B9B7C1E7E3E48 CRC64;
+     MKQIKKLLVA NRGEIAIRIF RAAAELDIST VAIYSNEDKS SLHRYKADES YLVGSDLGPA
+     ESYLNIERII DVAKQANVDA IHPGYGFLSE NEQFARRCAE EGIKFIGPHL EHLDMFGDKV
+     KARTTAIKAD LPVIPGTDGP IKSYELAKEF AEEAGFPLMI KATSGGGGKG MRIVREESEL
+     EDAFHRAKSE AEKSFGNSEV YIERYIDNPK HIEVQVIGDE HGNIVHLFER DCSVQRRHQK
+     VVEVAPSVGL SPTLRQRICD AAIQLMENIK YVNAGTVEFL VSGDEFFFIE VNPRVQVEHT
+     ITEMVTGIDI VKTQILVAAG ADLFGEEINM PQQKDITTLG YAIQCRITTE DPLNDFMPDT
+     GTIIAYRSSG GFGVRLDAGD GFQGAEISPY YDSLLVKLST HAISFKQAEE KMVRSLREMR
+     IRGVKTNIPF LINVMKNKKF TSGDYTTKFI EETPELFDIQ PSLDRGTKTL EYIGNVTING
+     FPNVEKRPKP DYELASIPTV SSSKIASFSG TKQLLDEVGP KGVAEWVKKQ DDVLLTDTTF
+     RDAHQSLLAT RVRTKDMINI ASKTADVFKD GFSLEMWGGA TFDVAYNFLK ENPWERLERL
+     RKAIPNVLFQ MLLRASNAVG YKNYPDNVIH KFVQESAKAG IDVFRIFDSL NWVDQMKVAN
+     EAVQEAGKIS EGTICYTGDI LNPERSNIYT LEYYVKLAKE LEREGFHILA IKDMAGLLKP
+     KAAYELIGEL KSAVDLPIHL HTHDTSGNGL LTYKQAIDAG VDIIDTAVAS MSGLTSQPSA
+     NSLYYALNGF PRHLRTDIEG MESLSHYWST VRTYYSDFES DIKSPNTEIY QHEMPGGQYS
+     NLSQQAKSLG LGERFDEVKD MYRRVNFLFG DIVKVTPSSK VVGDMALYMV QNDLDEQSVI
+     TDGYKLDFPE SVVSFFKGEI GQPVNGFNKD LQAVILKGQE ALTARPGEYL EPVDFEKVRE
+     LLEEEQQGPV TEQDIISYVL YPKVYEQYIQ TRNQYGNLSL LDTPTFFFGM RNGETVEIEI
+     DKGKRLIIKL ETISEPDENG NRTIYYAMNG QARRIYIKDE NVHTNANVKP KADKSNPSHI
+     GAQMPGSVTE VKVSVGETVK ANQPLLITEA MKMETTIQAP FDGVIKQVTV NNGDTIATGD
+     LLIEIEKATD
+//
+ID   A0A142DS38_ZIKV         Unreviewed;      3423 AA.
+AC   A0A142DS38;
+DT   08-JUN-2016, integrated into UniProtKB/TrEMBL.
+DT   08-JUN-2016, sequence version 1.
+DT   07-SEP-2016, entry version 3.
+DE   RecName: Full=Genome polyprotein {ECO:0000256|SAAS:SAAS00058068};
+DE   Flags: Precursor;
+OS   Zika virus (strain Mr 766) (ZIKV).
+OC   Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA stage;
+OC   Flaviviridae; Flavivirus.
+OX   NCBI_TaxID=64320 {ECO:0000313|EMBL:AMQ34004.1};
+RN   [1] {ECO:0000313|EMBL:AMQ34004.1}
+RP   NUCLEOTIDE SEQUENCE.
+RC   STRAIN=MEX/InDRE/Sm/2016 {ECO:0000313|EMBL:AMQ34004.1};
+RA   Diaz-Quinonez J.A., Pena-Alonso R., Garces-Ayala F.,
+RA   Mendieta-Condado E., Escobar-Escamilla N., Vazquez-Pichardo M.,
+RA   Torres-Longoria B., Lopez-Martinez I., Hernandez-Rivas L.,
+RA   Ruiz-Matus C., Kuri-Morales P.A., Ramirez-Gonzalez J.E.;
+RT   "Molecular characterization of Zika virus in Mexico.";
+RL   Submitted (MAR-2016) to the EMBL/GenBank/DDBJ databases.
+CC   -!- CATALYTIC ACTIVITY: ATP + H(2)O = ADP + phosphate.
+CC       {ECO:0000256|SAAS:SAAS00291628}.
+CC   -!- CATALYTIC ACTIVITY: NTP + H(2)O = NDP + phosphate.
+CC       {ECO:0000256|SAAS:SAAS00291428}.
+CC   -!- CATALYTIC ACTIVITY: Nucleoside triphosphate + RNA(n) = diphosphate
+CC       + RNA(n+1). {ECO:0000256|SAAS:SAAS00510455}.
+CC   -!- SUBCELLULAR LOCATION: Virion membrane
+CC       {ECO:0000256|SAAS:SAAS00554409}; Multi-pass membrane protein
+CC       {ECO:0000256|SAAS:SAAS00554409}.
+CC   -!- SIMILARITY: Contains RdRp catalytic domain.
+CC       {ECO:0000256|SAAS:SAAS00510369}.
+CC   -!- SIMILARITY: Contains helicase ATP-binding domain.
+CC       {ECO:0000256|SAAS:SAAS00252625}.
+CC   -!- SIMILARITY: Contains helicase C-terminal domain.
+CC       {ECO:0000256|SAAS:SAAS00251432}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; KU922960; AMQ34004.1; -; Genomic_RNA.
+DR   GO; GO:0033644; C:host cell membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0019028; C:viral capsid; IEA:UniProtKB-KW.
+DR   GO; GO:0019031; C:viral envelope; IEA:InterPro.
+DR   GO; GO:0055036; C:virion membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008026; F:ATP-dependent helicase activity; IEA:InterPro.
+DR   GO; GO:0003725; F:double-stranded RNA binding; IEA:InterPro.
+DR   GO; GO:0004482; F:mRNA (guanine-N7-)-methyltransferase activity; IEA:InterPro.
+DR   GO; GO:0004483; F:mRNA (nucleoside-2'-O-)-methyltransferase activity; IEA:InterPro.
+DR   GO; GO:0003724; F:RNA helicase activity; IEA:InterPro.
+DR   GO; GO:0003968; F:RNA-directed RNA polymerase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0004252; F:serine-type endopeptidase activity; IEA:InterPro.
+DR   GO; GO:0070008; F:serine-type exopeptidase activity; IEA:InterPro.
+DR   GO; GO:0005198; F:structural molecule activity; IEA:InterPro.
+DR   GO; GO:0039654; P:fusion of virus membrane with host endosome membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0039520; P:induction by virus of host autophagy; IEA:UniProtKB-KW.
+DR   GO; GO:0039694; P:viral RNA genome replication; IEA:InterPro.
+DR   GO; GO:0019062; P:virion attachment to host cell; IEA:UniProtKB-KW.
+DR   CDD; cd12149; Flavi_E_C; 1.
+DR   Gene3D; 2.60.40.350; -; 1.
+DR   Gene3D; 2.60.98.10; -; 2.
+DR   Gene3D; 3.30.387.10; -; 1.
+DR   Gene3D; 3.40.50.150; -; 1.
+DR   Gene3D; 3.40.50.300; -; 2.
+DR   InterPro; IPR011492; DEAD_Flavivir.
+DR   InterPro; IPR000069; Env_glycoprot_M_flavivir.
+DR   InterPro; IPR013755; Flav_gly_cen_dom_subdom1.
+DR   InterPro; IPR001122; Flavi_capsidC.
+DR   InterPro; IPR027287; Flavi_E_Ig-like.
+DR   InterPro; IPR026470; Flavi_E_Stem/Anchor_dom.
+DR   InterPro; IPR001157; Flavi_NS1.
+DR   InterPro; IPR000752; Flavi_NS2A.
+DR   InterPro; IPR000487; Flavi_NS2B.
+DR   InterPro; IPR000404; Flavi_NS4A.
+DR   InterPro; IPR001528; Flavi_NS4B.
+DR   InterPro; IPR002535; Flavi_propep.
+DR   InterPro; IPR000336; Flavivir/Alphavir_Ig-like.
+DR   InterPro; IPR001850; Flavivirus_NS3_S7.
+DR   InterPro; IPR014412; Gen_Poly_FLV.
+DR   InterPro; IPR011998; Glycoprot_cen/dimer.
+DR   InterPro; IPR013754; GlyE_dim.
+DR   InterPro; IPR014001; Helicase_ATP-bd.
+DR   InterPro; IPR001650; Helicase_C.
+DR   InterPro; IPR014756; Ig_E-set.
+DR   InterPro; IPR026490; mRNA_cap_0/1_MeTrfase.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   InterPro; IPR009003; Peptidase_S1_PA.
+DR   InterPro; IPR000208; RNA-dir_pol_flavivirus.
+DR   InterPro; IPR007094; RNA-dir_pol_PSvirus.
+DR   InterPro; IPR002877; rRNA_MeTrfase_FtsJ_dom.
+DR   InterPro; IPR029063; SAM-dependent_MTases.
+DR   Pfam; PF01003; Flavi_capsid; 1.
+DR   Pfam; PF07652; Flavi_DEAD; 1.
+DR   Pfam; PF02832; Flavi_glycop_C; 1.
+DR   Pfam; PF00869; Flavi_glycoprot; 1.
+DR   Pfam; PF01004; Flavi_M; 1.
+DR   Pfam; PF00948; Flavi_NS1; 1.
+DR   Pfam; PF01005; Flavi_NS2A; 1.
+DR   Pfam; PF01002; Flavi_NS2B; 1.
+DR   Pfam; PF01350; Flavi_NS4A; 1.
+DR   Pfam; PF01349; Flavi_NS4B; 1.
+DR   Pfam; PF00972; Flavi_NS5; 1.
+DR   Pfam; PF01570; Flavi_propep; 1.
+DR   Pfam; PF01728; FtsJ; 1.
+DR   Pfam; PF00949; Peptidase_S7; 1.
+DR   PIRSF; PIRSF003817; Gen_Poly_FLV; 1.
+DR   SMART; SM00487; DEXDc; 1.
+DR   SMART; SM00490; HELICc; 1.
+DR   SUPFAM; SSF50494; SSF50494; 1.
+DR   SUPFAM; SSF52540; SSF52540; 2.
+DR   SUPFAM; SSF53335; SSF53335; 1.
+DR   SUPFAM; SSF56983; SSF56983; 1.
+DR   SUPFAM; SSF81296; SSF81296; 1.
+DR   TIGRFAMs; TIGR04240; flavi_E_stem; 1.
+DR   PROSITE; PS51527; FLAVIVIRUS_NS2B; 1.
+DR   PROSITE; PS51528; FLAVIVIRUS_NS3PRO; 1.
+DR   PROSITE; PS51192; HELICASE_ATP_BIND_1; 1.
+DR   PROSITE; PS51194; HELICASE_CTER; 1.
+DR   PROSITE; PS50507; RDRP_SSRNA_POS; 1.
+DR   PROSITE; PS51591; RNA_CAP01_NS5_MT; 1.
+PE   4: Predicted;
+KW   Activation of host autophagy by virus {ECO:0000256|SAAS:SAAS00445756};
+KW   ATP-binding {ECO:0000256|SAAS:SAAS00445774};
+KW   Capsid protein {ECO:0000256|SAAS:SAAS00445860};
+KW   Disulfide bond {ECO:0000256|SAAS:SAAS00440082};
+KW   Fusion of virus membrane with host endosomal membrane
+KW   {ECO:0000256|SAAS:SAAS00440227};
+KW   Fusion of virus membrane with host membrane
+KW   {ECO:0000256|SAAS:SAAS00440227};
+KW   Helicase {ECO:0000256|SAAS:SAAS00445774};
+KW   Host membrane {ECO:0000256|SAAS:SAAS00445977};
+KW   Host-virus interaction {ECO:0000256|SAAS:SAAS00445756,
+KW   ECO:0000256|SAAS:SAAS00445995};
+KW   Hydrolase {ECO:0000256|SAAS:SAAS00440108,
+KW   ECO:0000256|SAAS:SAAS00445774};
+KW   Membrane {ECO:0000256|SAAS:SAAS00445939,
+KW   ECO:0000256|SAAS:SAAS00445977, ECO:0000256|SAM:Phobius};
+KW   Nucleotide-binding {ECO:0000256|SAAS:SAAS00445774};
+KW   Nucleotidyltransferase {ECO:0000256|SAAS:SAAS00510600};
+KW   Protease {ECO:0000256|SAAS:SAAS00440108};
+KW   RNA-binding {ECO:0000256|SAAS:SAAS00463221};
+KW   RNA-directed RNA polymerase {ECO:0000256|SAAS:SAAS00510600};
+KW   Serine protease {ECO:0000256|SAAS:SAAS00440108};
+KW   Transferase {ECO:0000256|SAAS:SAAS00510600};
+KW   Transmembrane {ECO:0000256|SAAS:SAAS00445939,
+KW   ECO:0000256|SAM:Phobius};
+KW   Transmembrane helix {ECO:0000256|SAAS:SAAS00445939,
+KW   ECO:0000256|SAM:Phobius};
+KW   Viral attachment to host cell {ECO:0000256|SAAS:SAAS00445995};
+KW   Viral penetration into host cytoplasm {ECO:0000256|SAAS:SAAS00440227};
+KW   Viral RNA replication {ECO:0000256|SAAS:SAAS00511060};
+KW   Virion {ECO:0000256|SAAS:SAAS00445860, ECO:0000256|SAAS:SAAS00445995};
+KW   Virus entry into host cell {ECO:0000256|SAAS:SAAS00440227,
+KW   ECO:0000256|SAAS:SAAS00445995}.
+FT   TRANSMEM     33     54       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM    250    269       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM    275    295       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM    746    767       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM    773    798       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   1178   1200       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   1273   1290       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   1343   1366       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   1378   1394       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   1400   1417       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   1473   1496       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2174   2192       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2199   2216       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2222   2241       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2253   2275       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2306   2327       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2334   2353       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2373   2392       Helical. {ECO:0000256|SAM:Phobius}.
+FT   TRANSMEM   2442   2462       Helical. {ECO:0000256|SAM:Phobius}.
+FT   DOMAIN     1373   1502       FLAVIVIRUS_NS2B.
+FT                                {ECO:0000259|PROSITE:PS51527}.
+FT   DOMAIN     1503   1680       Peptidase S7.
+FT                                {ECO:0000259|PROSITE:PS51528}.
+FT   DOMAIN     1683   1839       Helicase ATP-binding.
+FT                                {ECO:0000259|PROSITE:PS51192}.
+FT   DOMAIN     1834   2013       Helicase C-terminal.
+FT                                {ECO:0000259|PROSITE:PS51194}.
+FT   DOMAIN     2521   2785       MRNA cap 0-1 NS5-type MT.
+FT                                {ECO:0000259|PROSITE:PS51591}.
+FT   DOMAIN     3049   3199       RdRp catalytic.
+FT                                {ECO:0000259|PROSITE:PS50507}.
+FT   ACT_SITE   1553   1553       Charge relay system; for serine protease
+FT                                NS3 activity.
+FT                                {ECO:0000256|PIRSR:PIRSR003817-1}.
+FT   ACT_SITE   1577   1577       Charge relay system; for serine protease
+FT                                NS3 activity.
+FT                                {ECO:0000256|PIRSR:PIRSR003817-1}.
+FT   ACT_SITE   1637   1637       Charge relay system; for serine protease
+FT                                NS3 activity.
+FT                                {ECO:0000256|PIRSR:PIRSR003817-1}.
+SQ   SEQUENCE   3423 AA;  379174 MW;  3581EBA4814757DD CRC64;
+     MKNPKKKSGG FRIVNMLKRG VARVSPFGGL KRLPAGLLLG HGPIRMVLAI LAFLRFTAIK
+     PSLGLINRWG SVGKKEAMEI IKKFKKDLAA MLRIINARKE KKRRGAETSV GIVGLLLTTA
+     MAAEVTRRGS AYYMYLDRND AGEAISFPTT LGMNKCYIQI MDLGHMCDAT MSYECPMLDE
+     GVEPDDVDCW CNTTSTWVVY GTCHHKKGEA RRSRRAVTLP SHSTRKLQTR SQTWLESREY
+     TKHLIRVENW IFRNPGFALA AAAIAWLLGS STSQKVIYLV MILLIAPAYS IRCIGVSNRD
+     FVEGMSGGTW VDVVLEHGGC VTVMAQDKPT VDIELVTTTV SNMAEVRSYC YEASISDMAS
+     DSRCPTQGEA YLDKQSDTQY VCKRTLVDRG WGNGCGLFGK GSLVTCAKFA CSKKMTGKSI
+     QPENLEYRIM LSVHGSQHSG MIVNDTGHET DENRAKVEIT PNSPRAEATL GGFGSLGLDC
+     EPRTGLDFSD LYYLTMNNKH WLVHKEWFHD IPLPWHAGAD TGTPHWNNKE ALVEFKDAHA
+     KRQTVVVLGS QEGAVHTALA GALEAEMDGA KGRLSSGHLK CRLKMDKLRL KGVSYSLCTA
+     AFTFTKIPAE TLHGTVTVEV QYAGTDGPCK VPAQMAVDMQ TLTPVGRLIT ANPVITESTE
+     NSKMMLELDP PFGDSYIVIG VGEKKITHHW HRSGSTIGKA FEATVRGAKR MAVLGDTAWD
+     FGSVGGALNS LGKGIHQIFG AAFKSLFGGM SWFSQILIGT LLMWLGLNTK NGSISLMCLA
+     LGGVLIFLST AVSADVGCSV DFSKKETRCG TGVFVYNDVE AWRDRYKYHP DSPRRLAAAV
+     KQAWEDGICG ISSVSRMENI MWRSVEGELN AILEENGVQL TVVVGSVKNP MWRGPQRLPV
+     PVNELPHGWK AWGKSYFVRA AKTNNSFVVD GDTLKECPLK HRAWNSFLVE DHGFGVFHTS
+     VWLKVREDYS LECDPAVIGT AVKGKEAVHS DLGYWIESEK NDTWRLKRAH LIEMKTCEWP
+     KSHTLWTDGI EESDLIIPKS LAGPLSHHNT REGYRTQMKG PWHSEELEIR FEECPGTKVH
+     VEETCGTRGP SLRSTTASGR VIEEWCCREC TMPPLSFWAK DGCWYGMEIR PRKEPESNLV
+     RSMVTAGSTD HMDHFSLGVL VILLMVQEGL KKRMTTKIII STSMAVLVAM ILGGFSMSDL
+     AKLAILMGAT FAEMNTGGDV AHLALTAAFK VRPALLVSFI FRANWTPRES MLLALASCLL
+     QTAISALEGD LMVLINGFAL AWLAIRAMVV PRTDNITLAI LAALTPLARG TLLVAWRAGL
+     ATCGGFMLLS LKGKGSVKKN LPFVMALGLT AVRLVDPINV VGLLLLTRSG KRSWPPSEVL
+     TAVGLICALA GGFAKADIEM AGPMAAVGLL IVSYVVSGKS VDMYIERAGD ITWEKDAEVT
+     GNSPRLDVAL DESGDFSLVE DDGPPMREII LKVVLMTICG MNPIAIPFAA GAWYVYVKTG
+     KRSGALWDVP APKEVKKGET TDGVYRVMTR RLLGSTQVGV GVMQEGVFHT MWHVTKGSAL
+     RSGEGRLDPY WGDVKQDLVS YCGPWKLDAA WDGHSEVQLL AVPPGERERN IQTLPGIFKT
+     KDGDIGAVAL DYPAGTSGSP ILDKCGRVIG LYGNGVVIKN GSYVSAITQG RREEETPVEC
+     FEPSMLKKKQ LTVLDLHPGA GKTRRVLPEI VREAIKTRLR TVILAPTRVV AAEMEEALRG
+     LPVRYMTTAV NVTHSGTEIV DLMCHATFTS RLLQPIRVPN YNLYIMDEAH FTDPSSIAAR
+     GYISTRVEMG EAAAIFMTAT PPGTRDAFPD SNSPIMDTEV EVPERAWSSG FDWVTDHSGK
+     TVWFVPSVRN GNEIAACLTK AGKRVIQLSR KTFETEFQKT KHQEWDFVVT TDISEMGANF
+     KADRVIDSRR CLKPVILDGE RVILAGPMPV THASAAQRRG RIGRNPNKPG DEYLYGGGCA
+     ETDEDHAHWL EARMLLDNIY LQDGLIASLY RPEADKVAAI EGEFKLRTEQ RKTFVELMKR
+     GDLPVWLAYQ VASAGITYTD RRWCFDGTTN NTIMEDSVPA EVWTRHGEKR VLKPRWMDAR
+     VCSDHAALKS FKEFAAGKRG AAFGVMEALG TLPGHMTERF QEAIDNLAVL MRAETGSRPY
+     KAAAAQLPET LETIMLLGLL GTVSLGIFFV LMRNKGIGKM GFGMVTLGAS AWLMWLSEIE
+     PARIACVLIV VFLLLVVLIP EPEKQRSPQD NQMAIIIMVA VGLLGLITAN ELGWLERTKS
+     DLSHLMGRRE EGATIGFSMD IDLRPASAWA IYAALTTFIT PAVQHAVTTS YNNYSLMAMA
+     TQAGVLFGMG KGMPFYAWDF GVPLLMIGCY SQLTPLTLIV AIILLVAHYM YLIPGLQAAA
+     ARAAQKRTAA GIMKNPVVDG IVVTDIDTMT IDPQVEKKMG QVLLIAVAVS SAILSRTAWG
+     WGEAGALITA ATSTLWEGSP NKYWNSSTAT SLCNIFRGSY LAGASLIYTV TRNAGLVKRR
+     GGGTGETLGE KWKARLNQMS ALEFYSYKKS GITEVCREEA RRALKDGVAT GGHAVSRGSA
+     KLRWLVERGY LQPYGKVIDL GCGRGGWSYY AATIRKVQEV KGYTKGGPGH EEPVLVQSYG
+     WNIVRLKSGV DVFHMAAEPC DTLLCDIGES SSSPEVEEAR TLRVLSMVGD WLEKRPGAFC
+     IKVLCPYTST MMETLERLQR RYGGGLVRVP LSRNSTHEMY WVSGAKSNTI KSVSTTSQLL
+     LGRMDGPRRP VKYEEDVNLG SGTRAVVSCA EAPNMKIIGN RIERIRSEQA ETWFFDENHP
+     YRTWAYHGSY EAPTQGSASS LINGVVRLLS KPWDVVTGVT GIAMTDTTPY GQQRVFKEKV
+     DTRVPDPQEG TRQVMSMVSS WLWKELGKHK RPRVCTKEEF INKVRSNAAL GAIFEEEKEW
+     KTAVEAVNDP RFWALVDKER EHHLRGECQS CVYNMMGKRE KKQGEFGKAK GSRAIWYMWL
+     GARFLEFEAL GFLNEDHWMG RENSGGGVEV LGLQRLGYVL EEMSRIPGGR MYADDTAGWD
+     TRISRFDLEN EALITNQMEK GHRALALAII KYTYQNKVVK VLRPAEKGKT VMDIISRQDQ
+     RGSGQVVTYA LNTFTNLVVQ LIRNMEAEEV LEMQDLWLLR RSEKVTNWLQ SNGWDRLKRM
+     AVSGDDCVVK PIDDRFAHAL RFLNDMGKVR KDTQEWKPST GWDNWEEVPF CSHHFNKLHL
+     KDGRSIVVPC RHQDELIGRA RVSPGAGWSI RETACLAKSY AQMWQLLYFH RRDLRLMANA
+     ICSSVPVDWV PTGRTTWSIH GKGEWMTTED MLVVWNRVWI EENDHMEDKT PVAKWTDIPY
+     LGKREDLWCG SLIGHRPRTT WAENIKNTVN MVRRIIGDEE KYMDYLSTQV RYLGEEGSTP
+     GVL
+//

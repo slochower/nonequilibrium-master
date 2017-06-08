@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="github-pandoc.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
+  for (var i=0; i < mathElements.length; i++)
+  {
+   var texText = mathElements[i].firstChild
+   katex.render(texText.data, mathElements[i])
+  }}
+  </script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="recent-reading">Recent reading</h1>
+<h2 id="theory">Theory</h2>
+<h3 id="dcua6ege"><span class="citation" data-cites="1DCUa6egE">(Brown and Sivak <a href="#ref-1DCUa6egE">2017</a>)</span></h3>
+<p>Brown and Sivak conclude that minimizing the depth (and number, I think) of intermediate metastable states maximizes the flux.</p>
+<p>Their model defines forward and reverse rate constants similar to our model, although they deal with the input energy in a somewhat different manner. In our case, nonequilibrium populations drive the system. Here, the energy difference between the initial and final state of the system (<span class="math inline">E_1</span>) drive the flux (see Figure <a href="#fig:bs">1</a>).</p>
+<figure>
+<img src="./images/brown-2017-figure2.png" alt="Figure 1: The two state model from Brown and Sivak." id="fig:bs" /><figcaption>Figure 1: The two state model from Brown and Sivak.</figcaption>
+</figure>
+<p>Raising the barrier (<span class="math inline">E_2</span>), decreases the flux. Each barrier is associate with some energy &quot;dissipation&quot; between the initial and final energy states (I think this is just a free energy difference <span class="math inline">\Delta E</span> but there is probably some reason why they chose <span class="math inline">\sigma</span> for these). It turns out that maximum flux does not occur when there is an even dissipation of energy at each barrier. Rather, there is an optimal distribution of these energy dissipation terms that depends on the rate constants for each barrier. There may be a way to use this information to look at the evolved surface splines, although the evolved splines have varying number of peaks and troughs.</p>
+<blockquote>
+<p>We find an unequal optimal dissipation allocation occurs when: the nonequilibrium steady-state flux is maximized, rather than an efficiency or power; optimization is subject to fixed total dissipation budget per cycle, rather than fixed flux or entropy production rate; cycle transitions have different bare rate constants, corresponding to different barrier heights; and the ratio of forward and reverse rate constants varies exponentially, not linearly, with dissipation ((2)).</p>
+</blockquote>
+<p>This article interprets the results of Wagoner and Dill <span class="citation" data-cites="aWrqnjWo">(Wagoner and Dill <a href="#ref-aWrqnjWo">2016</a>)</span> that flux is affected differently by changing the individual rate constants for barrier crossing.</p>
+<h3 id="trvh1e8u"><span class="citation" data-cites="trvh1E8U">(Štacko et al. <a href="#ref-trvh1E8U">2017</a>)</span></h3>
+<p>A new synchronous rotary molecular motor from Feringa's group.</p>
+<h2 id="experiments">Experiments</h2>
+<h3 id="vcooebo5"><span class="citation" data-cites="vCOoEBo5">(Wenz, Han, and Müller <a href="#ref-vCOoEBo5">2006</a>)</span></h3>
+<p>Cyclodextrins...</p>
+<h2 id="references" class="unnumbered">References</h2>
+<div id="refs" class="references">
+<div id="ref-1DCUa6egE">
+<p>Brown, Aidan I, and David A Sivak. 2017. “Allocating Dissipation Across a Molecular Machine Cycle to Maximize Flux,” March. <a href="https://arxiv.org/abs/1703.05283v3" class="uri">https://arxiv.org/abs/1703.05283v3</a>.</p>
+</div>
+<div id="ref-trvh1E8U">
+<p>Štacko, Peter, Jos C. M. Kistemaker, Thomas van Leeuwen, Mu-Chieh Chang, Edwin Otten, and Ben L. Feringa. 2017. “Locked Synchronous Rotor Motion in a Molecular Motor.” <em>Science</em>. June 2. <a href="http://science.sciencemag.org/content/sci/356/6341/964" class="uri">http://science.sciencemag.org/content/sci/356/6341/964</a>.</p>
+</div>
+<div id="ref-aWrqnjWo">
+<p>Wagoner, Jason A., and Ken A. Dill. 2016. “Molecular Motors: Power Strokes Outperform Brownian Ratchets.” <em>The Journal of Physical Chemistry B</em> 120 (26). American Chemical Society (ACS): 6327–36. doi:<a href="https://doi.org/10.1021/acs.jpcb.6b02776">10.1021/acs.jpcb.6b02776</a>.</p>
+</div>
+<div id="ref-vCOoEBo5">
+<p>Wenz, Gerhard, Bao-Hang Han, and Axel Müller. 2006. “Cyclodextrin Rotaxanes and Polyrotaxanes.” <em>Chemical Reviews</em>. <a href="http://pubs.acs.org/doi/full/10.1021/cr970027%2B">http://pubs.acs.org/doi/full/10.1021/cr970027%2B</a>.</p>
+</div>
+</div>
+</body>
+</html>
