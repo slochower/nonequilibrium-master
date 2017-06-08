@@ -20,8 +20,8 @@ git remote set-url origin git@github.com:slochower/nonequilibrium-master.git
 
 # Decrypt and add SSH key
 openssl aes-256-cbc \
-  -K $encrypted_e7c6f2d0656b_key \
-  -iv $encrypted_e7c6f2d0656b_iv \
+  -K $encrypted_325835516fd8_key \
+  -iv $encrypted_325835516fd8 \
   -in ci/deploy.key.enc \
   -out ci/deploy.key -d
 eval `ssh-agent -s`

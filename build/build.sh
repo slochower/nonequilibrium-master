@@ -6,15 +6,15 @@ echo "Retrieving and processing reference metadata"
 (cd build && python references.py)
 
 # pandoc settings
-CSL_PATH=references/nonequilibrium.csl
-BIBLIOGRAPHY_PATH=references/generated/bibliography.json
-INPUT_PATH=references/generated/all-sections.md
+CSL_PATH=literature-review/references/nonequilibrium.csl
+BIBLIOGRAPHY_PATH=literature-review/references/generated/bibliography.json
+INPUT_PATH=literature-review/references/generated/all-sections.md
 
 # Make output directory
 mkdir -p output
 # Move images to output directory
 echo "Copying images"
-cp -R sections/images output/
+cp -R literature-review/sections/images output/
 
 # Create HTML outpout
 # http://pandoc.org/MANUAL.html
