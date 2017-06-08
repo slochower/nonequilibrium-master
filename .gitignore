@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Trajectories and associated files, but keep input files
+*.rst
+*.nc
+traj*.out
+eqnpt*.out
+eqnpt*.rst
+mini*.out
+mini*.rst
+therm*.out
+therm*.rst
+mden*
+mdinfo*
+mdout*
+*rst*
+
+# MOE files
+*.moe
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.directory
+
+# EndNote data directories
+*.Data/
+
+# SSL files
+*.pem
+*.cnf
+*.csr
+
+# Archives
+*.tar.gz
+
+# Ignore md-data, it's just too big for now.
+md-data/
+
+# Files starting with tilde (MS Word)
+~*
+
+# pycharm directory
+.idea
