@@ -305,7 +305,7 @@ class Simulation(object):
         and optionally (g) running an interative method to determine the steady-state distribution.
         """
         if self.data_source == 'pka_md_data':
-            self.dir = './md-data/pka-md-data'
+            self.dir = '../md-data/pka-md-data'
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/apo/' + self.name +
                                                         '_chi_pop_hist_targ.txt',
@@ -322,7 +322,7 @@ class Simulation(object):
             self.bound_clr = cmap[7]
 
         elif self.data_source == 'pka_reversed':
-            self.dir = './md-data/pka-md-reversed-and-averaged'
+            self.dir = '../md-data/pka-md-reversed-and-averaged'
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/apo/' + self.name +
                                                         '_chi_pop_hist_targ.txt',
@@ -341,7 +341,7 @@ class Simulation(object):
             self.bound_clr = cmap[7]
 
         elif self.data_source == 'adk_md_data':
-            self.dir = './md-data/adenylate-kinase'
+            self.dir = '../md-data/adenylate-kinase'
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/AdKDihedHist_apo-4ake/' +
                                                         self.name + '.dat',
@@ -363,7 +363,7 @@ class Simulation(object):
             self.bound_clr = cmap[1]
 
         elif self.data_source == 'hiv_md_data':
-            self.dir = './md-data/hiv-protease'
+            self.dir = '../md-data/hiv-protease'
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/1hhp_apo/' +
                                                         self.name + '.dat',
@@ -407,7 +407,7 @@ class Simulation(object):
         if self.load:
             u_rm = self.calculate_intrasurface_rates_with_load(self.unbound)
             b_rm = self.calculate_intrasurface_rates_with_load(self.bound)
-            
+
         if self.barrier:
             u_rm[self.barrier_bin][self.barrier_bin + 1] = 0
             u_rm[self.barrier_bin + 1][self.barrier_bin] = 0

@@ -68,7 +68,7 @@ if bad_refs:
     print('\n'.join(bad_refs))
     raise SystemExit(1)
 
-
+ 
 ref_df = pandas.DataFrame({'text': refs})
 tag_df = pandas.read_table(ref_dir.joinpath('tags.tsv'))
 tag_df['text'] = '@tag:' + tag_df.tag
