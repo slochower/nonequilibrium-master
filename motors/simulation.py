@@ -6,13 +6,11 @@ population distributions.
 """
 
 import math as math
-import matplotlib.pyplot as plt
 import numpy as np
-import scipy as sc
 import seaborn as sns
-from matplotlib.gridspec import GridSpec
+import os as os
 from scipy.ndimage.filters import gaussian_filter
-from aesthetics import paper_plot
+
 
 class Simulation(object):
     """
@@ -39,19 +37,19 @@ class Simulation(object):
         if self.data_source == 'pka_md_data' or self.data_source == 'pka_reversed':
             self.C_intersurface = 0.24 * 10 ** 6  # per mole per second
             self.offset_factor = 6.0  # kcal per mol
-            self.catalytic_rate = 140  # per second
+            self.catalytic_rate = 140.0  # per second
             self.cSubstrate = 2 * 10 ** -3  # ATP concentration (M)
         elif self.data_source == 'adk_md_data':
-            self.C_intersurface = 10 ** 6  # per mole per second
+            self.C_intersurface = 10.0 ** 6  # per mole per second
             self.offset_factor = 5.7  # kcal per mol
-            self.catalytic_rate = 312  # per second
+            self.catalytic_rate = 312.0  # per second
             # Let's say ATP concentration = 9 * 10**-3 M and AMP concentration = 2.8 * 10**-4 M
             # Absolute metabolite concentrations and implied enzyme active site occupancy in
             # Escherichia coli (2009), Nat Chem Biol
             # ATP.AMP concentration (M) as a single concentration
             self.cSubstrate = 2.5 * 10 ** -6
         elif self.data_source == 'hiv_md_data':
-            self.C_intersurface = 10 ** 6  # per mole per second
+            self.C_intersurface = 10.0 ** 6  # per mole per second
             self.offset_factor = 4.5  # kcal per mol
             self.catalytic_rate = 0.3  # per second
             self.cSubstrate = 2 * 10 ** -3  # Gag concentration (M)
@@ -94,12 +92,11 @@ class Simulation(object):
             self.load_slope = self.bins  # kcal per mol per (2 * pi) radians
         else:
             self.load_slope = 0
-        # By default, we run without any artifical barriers imposed on the motor.
+        # By default, we run without any artifical barriers imposed on the
+        # motor.
         self.barrier = False
         if self.barrier:
             self.barrier_bin = 0
-
-
 
     def data_to_energy(self, histogram):
         """
@@ -139,9 +136,9 @@ class Simulation(object):
         """
 
         forward_rates = self.C_intrasurface * \
-                        np.exp(-1 * np.diff(energy_surface) / float(2 * self.kT))
+            np.exp(-1 * np.diff(energy_surface) / float(2 * self.kT))
         backward_rates = self.C_intrasurface * \
-                         np.exp(+1 * np.diff(energy_surface) / float(2 * self.kT))
+            np.exp(+1 * np.diff(energy_surface) / float(2 * self.kT))
         rate_matrix = np.zeros((self.bins, self.bins))
         for i in range(self.bins - 1):
             rate_matrix[i][i + 1] = forward_rates[i]
@@ -166,9 +163,9 @@ class Simulation(object):
             ([energy_surface[i] + self.load_function(i) for i in range(self.bins)]))
         # This should handle the interior elements just fine.
         self.forward_rates = self.C_intrasurface * \
-                             np.exp(-1 * np.diff(surface_with_load) / float(2 * self.kT))
+            np.exp(-1 * np.diff(surface_with_load) / float(2 * self.kT))
         self.backward_rates = self.C_intrasurface * \
-                              np.exp(+1 * np.diff(surface_with_load) / float(2 * self.kT))
+            np.exp(+1 * np.diff(surface_with_load) / float(2 * self.kT))
         rate_matrix = np.zeros((self.bins, self.bins))
 
         for i in range(self.bins - 1):
@@ -239,8 +236,8 @@ class Simulation(object):
 
     def calculate_eigenvector(self):
         """
-        The eigenvectors and eigenvalues of the transition matrix are computed and the steady-state population is
-        assigned to the eigenvector with an eigenvalue of 1.
+        The eigenvectors and eigenvalues of the transition matrix are computed and the steady-state
+        population is assigned to the eigenvector with an eigenvalue of 1.
         """
 
         self.eigenvalues, eigenvectors = np.linalg.eig(np.transpose(self.tm))
@@ -250,9 +247,10 @@ class Simulation(object):
 
     def calculate_flux(self, ss, tm):
         """
-        This function calculates the intrasurface flux using the steady-state distribution and the transition matrix.
-        The steady-state distribution is a parameter so this function can be run with either the eigenvector-derived
-        steady-state distribution or the interated steady-state distribution.
+        This function calculates the intrasurface flux using the steady-state distribution and the
+        transition matrix.
+        The steady-state distribution is a parameter so this function can be run with either the
+        eigenvector-derived steady-state distribution or the interated steady-state distribution.
         """
 
         flux_u = np.empty((self.bins))
@@ -271,15 +269,15 @@ class Simulation(object):
         for i in range(self.bins, 2 * self.bins):
             if i == self.bins:
                 flux_b[i - self.bins] = -1 * \
-                                        (- ss[i] * tm[i][i + 1] / self.dt +
-                                         ss[i + 1] * tm[i + 1][i] / self.dt)
+                    (- ss[i] * tm[i][i + 1] / self.dt +
+                     ss[i + 1] * tm[i + 1][i] / self.dt)
             if i == 2 * self.bins - 1:
                 flux_b[i - self.bins] = -1 * (
                     - ss[i] * tm[i][self.bins] / self.dt + ss[self.bins] * tm[self.bins][i] / self.dt)
             else:
                 flux_b[i - self.bins] = -1 * \
-                                        (- ss[i] * tm[i][i + 1] / self.dt +
-                                         ss[i + 1] * tm[i + 1][i] / self.dt)
+                    (- ss[i] * tm[i][i + 1] / self.dt +
+                     ss[i + 1] * tm[i + 1][i] / self.dt)
         for i in range(self.bins):
             flux_ub[i] = -1 * (
                 - ss[i] * tm[i][i + self.bins] / self.dt + ss[i + self.bins] * tm[i + self.bins][i] / self.dt)
@@ -288,8 +286,6 @@ class Simulation(object):
         self.flux_b = flux_b
         self.flux_ub = flux_ub
         return
-
-
 
     def simulate(self, user_energies=False, catalysis=True):
         """
@@ -305,7 +301,8 @@ class Simulation(object):
         and optionally (g) running an interative method to determine the steady-state distribution.
         """
         if self.data_source == 'pka_md_data':
-            self.dir = '../md-data/pka-md-data'
+            self.dir = os.path.join(os.path.dirname(
+                __file__), '../md-data/pka-md-data')
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/apo/' + self.name +
                                                         '_chi_pop_hist_targ.txt',
@@ -322,7 +319,8 @@ class Simulation(object):
             self.bound_clr = cmap[7]
 
         elif self.data_source == 'pka_reversed':
-            self.dir = '../md-data/pka-md-reversed-and-averaged'
+            self.dir = os.path.join(os.path.dirname(
+                __file__), '../md-data/pka-md-reversed-and-averaged')
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/apo/' + self.name +
                                                         '_chi_pop_hist_targ.txt',
@@ -341,7 +339,8 @@ class Simulation(object):
             self.bound_clr = cmap[7]
 
         elif self.data_source == 'adk_md_data':
-            self.dir = '../md-data/adenylate-kinase'
+            self.dir = os.path.join(os.path.dirname(
+                __file__), '../md-data/adenylate-kinase')
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/AdKDihedHist_apo-4ake/' +
                                                         self.name + '.dat',
@@ -358,12 +357,12 @@ class Simulation(object):
                 print('Cannot read {} from {}.'.format(self.name, self.dir))
 
             cmap = sns.color_palette("Paired", 10)
-            # self.unbound_clr = cmap[0]
             self.unbound_clr = cmap[3]
             self.bound_clr = cmap[1]
 
         elif self.data_source == 'hiv_md_data':
-            self.dir = '../md-data/hiv-protease'
+            self.dir = os.path.join(os.path.dirname(
+                __file__), '../md-data/hiv-protease')
             try:
                 self.unbound_population = np.genfromtxt(self.dir + '/1hhp_apo/' +
                                                         self.name + '.dat',
@@ -399,7 +398,8 @@ class Simulation(object):
 
         self.bins = len(self.unbound)
         self.tm = np.zeros((self.bins, self.bins))
-        self.C_intrasurface = self.D / (360. / self.bins) ** 2  # per degree per second
+        self.C_intrasurface = self.D / \
+            (360. / self.bins) ** 2  # per degree per second
 
         if not self.load:
             u_rm = self.calculate_intrasurface_rates(self.unbound)

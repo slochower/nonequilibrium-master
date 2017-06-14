@@ -82,15 +82,16 @@ def paper_plot(fig, adjustment=0, scientific=False):
             x0, x1, y0, y1 = ax.axis()
             ax.xaxis((x0 - adjustment,
                       x1 + adjustment,
-                     ))
+                      y0,
+                      y1
+                      ))
         # Make axes thicker
         for axis in ['top', 'bottom', 'left', 'right']:
             ax.spines[axis].set_linewidth(2)
 
 
-def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False, 
-                 c=None, panel_label=None, panel_xoffset=-0.24, 
-                 panel_yoffset=0.95):
+def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False,
+                 c=None, panel_label=None, panel_xoffset=-0.24, panel_yoffset=0.95):
     """
     Quickly plot some data in a consistent style, useful for interactive explorations.
     :param x: List or array of data
@@ -120,7 +121,7 @@ def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False,
     if scientific:
         pretty_label(ax)
     if panel_label:
-        ax.annotate(r'\textbf{{ {} }}'.format(panel_label), xy=(0, 0), 
+        ax.annotate(r'\textbf{{ {} }}'.format(panel_label), xy=(0, 0),
                     xytext=(panel_xoffset, panel_yoffset),
                     xycoords='axes fraction', fontsize=24, fontweight='bold')
     ax.margins(None)
@@ -173,15 +174,15 @@ def pretty_label(ax, axis='both'):
         ax.set_label_text(update_label(label, exponent_text))
 
 
-def panel_label(panel_label=None,
+def panel_label(label=None,
                 panel_xoffset=-0.24, panel_yoffset=0.95):
     """
     Add a small label to the top left region of a figure.
-    :param panel_label: Figure label string
+    :param label: Figure label string
     :param panel_xoffset: Figure label $x$ position fine tuning
     :param panel_yoffset: Figure label $y$ position fine tuning
     """
     ax = plt.gca()
-    ax.annotate(r'\textbf{{ {} }}'.format(panel_label), xy=(0, 0), 
+    ax.annotate(r'\textbf{{ {} }}'.format(label), xy=(0, 0),
                 xytext=(panel_xoffset, panel_yoffset),
                 xycoords='axes fraction', fontsize=24, fontweight='bold')
