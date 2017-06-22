@@ -1,4 +1,4 @@
-from simulation import *
+from motors.simulation import Simulation
 
 def summarize_fluxes(name, concentration, data_source='adk_md_data', catalytic_rate=None):
     this = simulation(data_source = data_source)
