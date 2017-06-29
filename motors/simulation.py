@@ -97,6 +97,7 @@ class Simulation(object):
         self.barrier = False
         if self.barrier:
             self.barrier_bin = 0
+            self.barrier_height = 0
 
     def data_to_energy(self, histogram):
         """
@@ -409,10 +410,29 @@ class Simulation(object):
             b_rm = self.calculate_intrasurface_rates_with_load(self.bound)
 
         if self.barrier:
-            u_rm[self.barrier_bin][self.barrier_bin + 1] = 0
-            u_rm[self.barrier_bin + 1][self.barrier_bin] = 0
-            b_rm[self.barrier_bin][self.barrier_bin + 1] = 0
-            b_rm[self.barrier_bin + 1][self.barrier_bin] = 0
+            u_rm[self.barrier_bin][self.barrier_bin +
+                                   1] *= np.exp(-self.barrier_height / self.kT)
+            u_rm[self.barrier_bin +
+                 1][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
+            b_rm[self.barrier_bin][self.barrier_bin +
+                                   1] *= np.exp(-self.barrier_height / self.kT)
+            b_rm[self.barrier_bin +
+                 1][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
+
+            # energy_difference = self.unbound[self.barrier_bin +
+            #                                  1] - self.unbound[self.barrier_bin]
+            # adjusted_energy = energy_difference + self.barrier_height
+            # u_rm[self.barrier_bin][self.barrier_bin + 1] = self.C_intrasurface * \
+            #     np.exp(-1 * adjusted_energy / float(2 * self.kT))
+            # u_rm[self.barrier_bin + 1][self.barrier_bin] = self.C_intrasurface * \
+            #     np.exp(+1 * adjusted_energy / float(2 * self.kT))
+            # energy_difference = self.bound[self.barrier_bin +
+            #                                1] - self.bound[self.barrier_bin]
+            # adjusted_energy = energy_difference + self.barrier_height
+            # b_rm[self.barrier_bin][self.barrier_bin + 1] = self.C_intrasurface * \
+            #     np.exp(-1 * adjusted_energy / float(2 * self.kT))
+            # b_rm[self.barrier_bin + 1][self.barrier_bin] = self.C_intrasurface * \
+            #     np.exp(+1 * adjusted_energy / float(2 * self.kT))
 
         ub_rm, bu_rm = self.calculate_intersurface_rates(
             self.unbound, self.bound)
