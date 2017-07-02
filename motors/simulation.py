@@ -410,14 +410,21 @@ class Simulation(object):
             b_rm = self.calculate_intrasurface_rates_with_load(self.bound)
 
         if self.barrier:
-            u_rm[self.barrier_bin][self.barrier_bin +
-                                   1] *= np.exp(-self.barrier_height / self.kT)
-            u_rm[self.barrier_bin +
-                 1][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
-            b_rm[self.barrier_bin][self.barrier_bin +
-                                   1] *= np.exp(-self.barrier_height / self.kT)
-            b_rm[self.barrier_bin +
-                 1][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
+            if self.barrier_bin < self.bins - 1:
+                u_rm[self.barrier_bin][self.barrier_bin +
+                                    1] *= np.exp(-self.barrier_height / self.kT)
+                u_rm[self.barrier_bin +
+                    1][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
+                b_rm[self.barrier_bin][self.barrier_bin +
+                                    1] *= np.exp(-self.barrier_height / self.kT)
+                b_rm[self.barrier_bin +
+                    1][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
+            # Otherwise, barrier is across the PBCs
+            else:
+                u_rm[self.barrier_bin][0] *= np.exp(-self.barrier_height / self.kT)
+                u_rm[0][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
+                b_rm[self.barrier_bin][0] *= np.exp(-self.barrier_height / self.kT)
+                b_rm[0][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
 
             # energy_difference = self.unbound[self.barrier_bin +
             #                                  1] - self.unbound[self.barrier_bin]
