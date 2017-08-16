@@ -35,7 +35,8 @@ def prepare_plot():
     ]
 
 
-def paper_plot(fig, adjustment=0, scientific=False):
+def paper_plot(fig, adjustment=0, scientific=False, save=False, filename=None,
+               raster=False, label_pad=True):
     """
     Take a prepared figure and make additional adjustments for inclusion in manuscript:
     mostly tick thickness, length, and label padding, and include only the left and the bottom
@@ -58,9 +59,10 @@ def paper_plot(fig, adjustment=0, scientific=False):
         ax.xaxis.set_ticks_position('bottom')
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
-        # Increase padding
-        ax.xaxis.labelpad = 15
-        ax.yaxis.labelpad = 15
+        if label_pad:
+            # Increase padding
+            ax.xaxis.labelpad = 15
+            ax.yaxis.labelpad = 15
         # Make the background color white
         facecolor = 'white'
         if facecolor is False:
@@ -88,6 +90,9 @@ def paper_plot(fig, adjustment=0, scientific=False):
         # Make axes thicker
         for axis in ['top', 'bottom', 'left', 'right']:
             ax.spines[axis].set_linewidth(2)
+    if save:
+        plt.savefig(filename + '.png', dpi=300, bbox_inches='tight')
+        plt.savefig(filename + '.svg', dpi=300, bbox_inches='tight')
 
 
 def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False,
@@ -127,6 +132,31 @@ def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False,
     ax.margins(None)
     paper_plot(fig)
     return ax
+
+
+def setup_plot(y_label, x_label, axis_padding=0.06):
+    # https://stackoverflow.com/questions/31928209/matplotlib-fixed-spacing-between-left-edge-of-figure-and-y-axis
+    fig_width = 6 * 1.2
+    fig_height = 6
+    fig = plt.figure(figsize=(fig_width, fig_height))
+    left_margin = 0.95 / fig_width
+    right_margin = 0.20 / fig_width
+    bottom_margin = 0.50 / fig_height
+    top_margin = 0.25 / fig_height
+    x = left_margin + axis_padding   # horizontal position of bottom-left corner
+    y = bottom_margin                # vertical position of bottom-left corner
+    w = 1 - (left_margin + right_margin)  # width of axes
+    h = 1 - (bottom_margin + top_margin)  # height of axes
+    ax = fig.add_axes([x, y, w, h])
+    y_label_x = 0
+    y_label_y = y + h / 2.0
+    ax.set_ylabel(y_label, verticalalignment='top',
+                  horizontalalignment='center')
+    # Horizontally, the "top" of the y axis label is `label_padding` from
+    # from the left edge of the figure, no matter what.
+    ax.yaxis.set_label_coords(y_label_x, y_label_y, transform=fig.transFigure)
+    ax.set_xlabel(x_label)
+    return fig, ax
 
 
 def update_label(old_label, exponent_text):
