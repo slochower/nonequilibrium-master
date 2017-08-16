@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# pip
+*.egg-info
+*.egg
+
 # Trajectories and associated files, but keep input files
 *.rst
 *.nc
