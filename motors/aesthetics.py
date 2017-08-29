@@ -7,6 +7,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 from matplotlib.colors import colorConverter
+import datetime as datetime
 import seaborn as sns
 
 
@@ -156,6 +157,9 @@ def setup_plot(y_label, x_label, axis_padding=0.06):
     # from the left edge of the figure, no matter what.
     ax.yaxis.set_label_coords(y_label_x, y_label_y, transform=fig.transFigure)
     ax.set_xlabel(x_label)
+    d = datetime.datetime.now()
+    ax.annotate(f'{d.strftime("%I:%M %p %Z %A, %B %d, %Y")}', xy=(0.01, 0.01), xytext=(0.01, 0.01),
+                textcoords='figure fraction', xycoords='figure fraction', fontsize=10, color='0.5')
     return fig, ax
 
 
