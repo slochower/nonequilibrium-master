@@ -376,7 +376,8 @@ def return_concentration_slice(df, concentration):
     return tmp
 
 
-def return_fluxes_and_velocity(protein, name, concentrations, catalytic_rate=None):
+def return_fluxes_and_velocity(protein, name, concentrations, catalytic_rate=None,
+                               directory=None):
     """
     This helper function will return the turnover rate and the fluxes over a concentration range.
     :param protein: one of the recognized protein systems in the class
@@ -391,7 +392,7 @@ def return_fluxes_and_velocity(protein, name, concentrations, catalytic_rate=Non
         this.cSubstrate = concentration
         if catalytic_rate:
             this.catalytic_rate = catalytic_rate
-        this.simulate()
+        this.simulate(directory=directory)
         directional_flux.append(np.mean(this.flux_u + this.flux_b))
         reciprocating_flux.append(
             np.max(np.hstack((abs(this.flux_u), abs(this.flux_b)))))
