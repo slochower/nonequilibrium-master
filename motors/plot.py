@@ -397,7 +397,7 @@ def return_fluxes_and_velocity(protein, name, concentrations, catalytic_rate=Non
         reciprocating_flux.append(
             np.max(np.hstack((abs(this.flux_u), abs(this.flux_b)))))
         velocity.append(
-            np.sum(this.ss[this.this.bins:2 * this.this.bins]) * this.catalytic_rate)
+            np.sum(this.ss[this.bins:2 * this.bins]) * this.catalytic_rate)
     return directional_flux, reciprocating_flux, velocity
 
 
