@@ -32,7 +32,6 @@ class Simulation(object):
         # a lower value can be safely used without changing the results much.
         self.D = 3 * 10 ** 12  # degree**2 per second
         # Implementation parameters
-        self.dir = None
         self.data_source = data_source
         if self.data_source == 'pka_md_data' or self.data_source == 'pka_reversed':
             self.C_intersurface = 0.24 * 10 ** 6  # per mole per second
@@ -288,7 +287,7 @@ class Simulation(object):
         self.flux_ub = flux_ub
         return
 
-    def simulate(self, user_energies=False, catalysis=True):
+    def simulate(self, user_energies=False, catalysis=True, directory=None):
         """
         Now this function takes in a file(name) and determins the energy surfaces automatically,
         so I don't forget to do it in an interactive session.
@@ -302,82 +301,86 @@ class Simulation(object):
         and optionally (g) running an interative method to determine the steady-state distribution.
         """
         if self.data_source == 'pka_md_data':
-            self.dir = os.path.join(os.path.dirname(
-                __file__), '../md-data/pka-md-data')
+            if not directory:
+                directory = os.path.join(os.path.dirname(
+                    __file__), '../md-data/pka-md-data')
             try:
-                self.unbound_population = np.genfromtxt(self.dir + '/apo/' + self.name +
+                self.unbound_population = np.genfromtxt(directory + '/apo/' + self.name +
                                                         '_chi_pop_hist_targ.txt',
                                                         delimiter=',',
                                                         skip_header=1)
-                self.bound_population = np.genfromtxt(self.dir + '/atpmg/' + self.name +
+                self.bound_population = np.genfromtxt(directory + '/atpmg/' + self.name +
                                                       '_chi_pop_hist_ref.txt',
                                                       delimiter=',',
                                                       skip_header=1)
             except IOError:
-                print('Cannot read {} from {}.'.format(self.name, self.dir))
+                print('Cannot read {} from {}.'.format(self.name, directory))
             cmap = sns.color_palette("Paired", 10)
             self.unbound_clr = cmap[6]
             self.bound_clr = cmap[7]
 
         elif self.data_source == 'pka_reversed':
-            self.dir = os.path.join(os.path.dirname(
-                __file__), '../md-data/pka-md-reversed-and-averaged')
+            if not directory:
+                directory = os.path.join(os.path.dirname(
+                    __file__), '../md-data/pka-md-reversed-and-averaged')
             try:
-                self.unbound_population = np.genfromtxt(self.dir + '/apo/' + self.name +
+                self.unbound_population = np.genfromtxt(directory + '/apo/' + self.name +
                                                         '_chi_pop_hist_targ.txt',
                                                         delimiter=',',
                                                         skip_header=1)
-                self.bound_population = np.genfromtxt(self.dir + '/atpmg/' + self.name +
+                self.bound_population = np.genfromtxt(directory + '/atpmg/' + self.name +
                                                       '_chi_pop_hist_ref.txt',
                                                       delimiter=',',
                                                       skip_header=1)
 
             except IOError:
-                print('Cannot read {} from {}.'.format(self.name, self.dir))
+                print('Cannot read {} from {}.'.format(self.name, directory))
 
             cmap = sns.color_palette("Paired", 10)
             self.unbound_clr = cmap[6]
             self.bound_clr = cmap[7]
 
         elif self.data_source == 'adk_md_data':
-            self.dir = os.path.join(os.path.dirname(
-                __file__), '../md-data/adenylate-kinase')
+            if not directory:
+                directory = os.path.join(os.path.dirname(
+                    __file__), '../md-data/adenylate-kinase')
             try:
-                self.unbound_population = np.genfromtxt(self.dir + '/AdKDihedHist_apo-4ake/' +
+                self.unbound_population = np.genfromtxt(directory + '/AdKDihedHist_apo-4ake/' +
                                                         self.name + '.dat',
                                                         delimiter=' ',
                                                         skip_header=1,
                                                         usecols=1)
-                self.bound_population = np.genfromtxt(self.dir + '/AdKDihedHist_ap5-3hpq/' +
+                self.bound_population = np.genfromtxt(directory + '/AdKDihedHist_ap5-3hpq/' +
                                                       self.name + '.dat',
                                                       delimiter=' ',
                                                       skip_header=1,
                                                       usecols=1)
 
             except IOError:
-                print('Cannot read {} from {}.'.format(self.name, self.dir))
+                print('Cannot read {} from {}.'.format(self.name, directory))
 
             cmap = sns.color_palette("Paired", 10)
             self.unbound_clr = cmap[3]
             self.bound_clr = cmap[1]
 
         elif self.data_source == 'hiv_md_data':
-            self.dir = os.path.join(os.path.dirname(
-                __file__), '../md-data/hiv-protease')
+            if not directory:
+                directory = os.path.join(os.path.dirname(
+                    __file__), '../md-data/hiv-protease')
             try:
-                self.unbound_population = np.genfromtxt(self.dir + '/1hhp_apo/' +
+                self.unbound_population = np.genfromtxt(directory + '/1hhp_apo/' +
                                                         self.name + '.dat',
                                                         delimiter=' ',
                                                         skip_header=1,
                                                         usecols=1)
-                self.bound_population = np.genfromtxt(self.dir + '/1kjf_p1p6/' +
+                self.bound_population = np.genfromtxt(directory + '/1kjf_p1p6/' +
                                                       self.name + '.dat',
                                                       delimiter=' ',
                                                       skip_header=1,
                                                       usecols=1)
 
             except IOError:
-                print('Cannot read {} from {}.'.format(self.name, self.dir))
+                print('Cannot read {} from {}.'.format(self.name, directory))
 
             cmap = sns.color_palette("Paired", 10)
             self.unbound_clr = cmap[2]
@@ -425,21 +428,6 @@ class Simulation(object):
                 u_rm[0][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
                 b_rm[self.barrier_bin][0] *= np.exp(-self.barrier_height / self.kT)
                 b_rm[0][self.barrier_bin] *= np.exp(-self.barrier_height / self.kT)
-
-            # energy_difference = self.unbound[self.barrier_bin +
-            #                                  1] - self.unbound[self.barrier_bin]
-            # adjusted_energy = energy_difference + self.barrier_height
-            # u_rm[self.barrier_bin][self.barrier_bin + 1] = self.C_intrasurface * \
-            #     np.exp(-1 * adjusted_energy / float(2 * self.kT))
-            # u_rm[self.barrier_bin + 1][self.barrier_bin] = self.C_intrasurface * \
-            #     np.exp(+1 * adjusted_energy / float(2 * self.kT))
-            # energy_difference = self.bound[self.barrier_bin +
-            #                                1] - self.bound[self.barrier_bin]
-            # adjusted_energy = energy_difference + self.barrier_height
-            # b_rm[self.barrier_bin][self.barrier_bin + 1] = self.C_intrasurface * \
-            #     np.exp(-1 * adjusted_energy / float(2 * self.kT))
-            # b_rm[self.barrier_bin + 1][self.barrier_bin] = self.C_intrasurface * \
-            #     np.exp(+1 * adjusted_energy / float(2 * self.kT))
 
         ub_rm, bu_rm = self.calculate_intersurface_rates(
             self.unbound, self.bound)
