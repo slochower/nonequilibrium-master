@@ -5,7 +5,7 @@ from matplotlib.gridspec import GridSpec
 from tqdm import tqdm
 from motors.aesthetics import prepare_plot
 from motors.aesthetics import paper_plot
-from motors.simulations import Simulation
+from motors.simulation import Simulation
 
 
 def plot_input(this, save=False, filename=None):
