@@ -7,22 +7,13 @@ import numpy as np
 import pandas as pd
 
 
-def find_above_threshold(df, threshold):
+def find_above_threshold(df, quantity, threshold):
     concentrations = []
     number_above_threshold = []
-    for concentration in np.unique(df['Concentration'].values):
+    for concentration in tqdm(np.unique(df['Concentration'].values)):
         tmp = return_concentration_slice(df, concentration)
-        concentrations.append(10**concentration)
-        number_above_threshold.append(sum(tmp['Directional flux'].abs() > threshold))   
-    return concentrations, number_above_threshold
-
-def find_driven_above_threshold(df, threshold):
-    concentrations = []
-    number_above_threshold = []
-    for concentration in np.unique(df['Concentration'].values):
-        tmp = return_concentration_slice(df, concentration)
-        concentrations.append(10**concentration)
-        number_above_threshold.append(sum(tmp['Driven flux'].abs() > threshold))   
+        concentrations.append(10 ** concentration)
+        number_above_threshold.append(sum(tmp[str(quantity)].abs() > threshold))
     return concentrations, number_above_threshold
 
 
