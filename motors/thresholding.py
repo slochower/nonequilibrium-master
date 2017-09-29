@@ -5,7 +5,7 @@ flux above certain thresholds, changes wiht concentration.
 """
 import numpy as np
 import pandas as pd
-
+from tqdm import tqdm
 
 def find_above_threshold(df, quantity, threshold):
     concentrations = []
