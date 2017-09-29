@@ -3,11 +3,11 @@ General functions for controlling the aesthetics of figures and
 ensuring consistency.
 """
 
+import datetime as datetime
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 from matplotlib.colors import colorConverter
-import datetime as datetime
 import seaborn as sns
 
 
@@ -43,9 +43,6 @@ def paper_plot(fig, adjustment=0, scientific=False, save=False, filename=None,
     mostly tick thickness, length, and label padding, and include only the left and the bottom
     axis spines. It would be nice to force the axes to end on a major tick, but I haven't
     figured out how to do that yet.
-    :param fig:
-    :param adjustment:
-    :param scientific:
     """
     for ax in fig.axes:
         # Increase padding
@@ -87,7 +84,7 @@ def paper_plot(fig, adjustment=0, scientific=False, save=False, filename=None,
                       x1 + adjustment,
                       y0,
                       y1
-                      ))
+                     ))
         # Make axes thicker
         for axis in ['top', 'bottom', 'left', 'right']:
             ax.spines[axis].set_linewidth(2)
@@ -100,16 +97,6 @@ def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False,
                  c=None, panel_label=None, panel_xoffset=-0.24, panel_yoffset=0.95):
     """
     Quickly plot some data in a consistent style, useful for interactive explorations.
-    :param x: List or array of data
-    :param y: List or array of data
-    :param xlabel: Label for $x$ axis
-    :param ylabel: Label for $y$ axis
-    :param scientific: Scientific notation boolean
-    :param c: Color
-    :param panel_label: Figure label (top left)
-    :param panel_xoffset: Figure label $x$ position fine tuning
-    :param panel_yoffset: Figure label $y$ position fine tuning
-    :return:
     """
     fig = plt.figure(figsize=(6 * 1.2, 6))
     grid = GridSpec(1, 1, wspace=0.2, hspace=0.5)
@@ -136,6 +123,9 @@ def generic_plot(x, y, xlabel=None, ylabel=None, scientific=False,
 
 
 def setup_plot(y_label, x_label, axis_padding=0.06):
+    """
+    Another helper function that can be used to create time-stampped plots.
+    """
     # https://stackoverflow.com/questions/31928209/matplotlib-fixed-spacing-between-left-edge-of-figure-and-y-axis
     fig_width = 6 * 1.2
     fig_height = 6
@@ -167,9 +157,6 @@ def update_label(old_label, exponent_text):
     """
     Update an axis label with scientific notation using LaTeX formatting for the
     order of magnitude.
-    :param old_label:
-    :param exponent_text:
-    :return:
     """
     if exponent_text == "":
         return old_label
@@ -185,8 +172,6 @@ def update_label(old_label, exponent_text):
 def pretty_label(ax, axis='both'):
     """
     Format the label string with the exponent from the ScalarFormatter.
-    :param ax:
-    :param axis:
     """
     try:
         ax.xaxis
@@ -212,9 +197,6 @@ def panel_label(label=None,
                 panel_xoffset=-0.24, panel_yoffset=0.95):
     """
     Add a small label to the top left region of a figure.
-    :param label: Figure label string
-    :param panel_xoffset: Figure label $x$ position fine tuning
-    :param panel_yoffset: Figure label $y$ position fine tuning
     """
     ax = plt.gca()
     ax.annotate(r'\textbf{{ {} }}'.format(label), xy=(0, 0),

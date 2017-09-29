@@ -10,13 +10,8 @@ from motors.simulation import Simulation
 
 def plot_input(this, save=False, filename=None):
     """
-    This function plots the unbound and bound histograms as a function of dihedral angle. The input histograms
-    are taken to be normalized populations derived from MD simulations.
-    :param this: an object of class Simulation that contains `this.unthis.bound_population` and `this.bound_population` attributes,
-    at minimum
-    :param save: whether to save the plot to a file
-    :param filename: name of file
-    :return:
+    Plot the apo and bound histograms as a function of dihedral angle. 
+    The input histograms are taken to be normalized populations derived from MD simulations.
     """
 
     fig = plt.figure(figsize=(6 * 1.2, 6))
@@ -38,7 +33,7 @@ def plot_input(this, save=False, filename=None):
 
 def plot_energy(this, save=False, filename=None):
     """
-    This function plots the unbound and bound energies (i.e., chemical potentials)
+    Plot the unbound and bound energies (i.e., chemical potentials)
     associated with a Simulation object.
     """
 
@@ -56,12 +51,11 @@ def plot_energy(this, save=False, filename=None):
     paper_plot(fig, scientific=False)
     if save:
         plt.savefig(filename + '.png', dpi=300, bbox_inches='tight')
-        # return fig
 
 
 def plot_ss(this, save=False, filename=None):
     """
-    This function plots the nonequilibrium steady-state distribution associated
+    Plot the nonequilibrium steady-state distribution associated
     with a Simulation object.
     By default, this will plot the eigenvector-derived steady-state distribution.
     """
@@ -81,23 +75,18 @@ def plot_ss(this, save=False, filename=None):
     paper_plot(fig, scientific=False)
     if save:
         plt.savefig(filename + '.png', dpi=300, bbox_inches='tight')
-        # return fig
 
 
 def print_parameter(label, value, unit):
     """
-    This function pretty prints some class variables for the flux plots.
-    :param label:
-    :param value:
-    :param unit:
-    :return:
+    Pretty-print some class variables for the flux plots.
     """
     print('{:<25} {:<+10.2e} {:<10}'.format(label, value, unit))
 
 
 def plot_flux(this, save=False, filename=None):
     """
-    This function plots the intrasurface flux separately and as a sum. The intrasurface flux
+    Plot the intrasurface flux separately and as a sum. The intrasurface flux
     is the directional flux. This also prints the simulation parameters.
     """
 
@@ -125,8 +114,6 @@ def plot_flux(this, save=False, filename=None):
     ax1.plot(range(this.bins), this.flux_b, c=this.bound_clr, ls='--')
     ax1.plot(range(this.bins), this.flux_u + this.flux_b, 'o', c='k',
              lw=2, alpha=0.5, zorder=-1, label='Net flux')
-    # ax1.scatter(range(this.bins), flux_u + flux_b, c='k', marker='+-')
-    # ax1.set_xlim([0, this.bins])
     ax1.set_xticks([0, this.bins / 4, this.bins /
                     2, 3 * this.bins / 4, this.bins])
     ax1.set_xticklabels(
@@ -141,7 +128,7 @@ def plot_flux(this, save=False, filename=None):
 
 def plot_load(this, save=False, filename=None):
     """
-    This function plots the unbound and bound energy surfaces with a constant added load.
+    Plot the unbound and bound energy surfaces with a constant added load.
     """
 
     fig = plt.figure(figsize=(6 * 1.2, 6))
@@ -168,14 +155,8 @@ def plot_load(this, save=False, filename=None):
 def plot_fluxes_and_velocity(concentrations, directional_flux, reciprocating_flux, velocity,
                              ymin1=None, ymax1=None, label=None):
     """
-
-    :param concentrations:
-    :param directional_flux:
-    :param reciprocating_flux:
-    :param velocity:
-    :param ymin1:
-    :param ymax1:
-    :param label:
+    Plot directional and reciprocating probability flux and enzyme velocity 
+    over a range of concentrations. 
     """
     cmap = sns.color_palette("Paired", 10)
     fig = plt.figure(figsize=(6 * 1.2, 6))
@@ -233,14 +214,8 @@ def plot_fluxes_and_velocity(concentrations, directional_flux, reciprocating_flu
 def plot_directional_flux_and_velocity(concentrations, directional_flux, velocity,
                                        ymin1=None, ymax1=None, label=None):
     """
-
-    :param concentrations:
-    :param directional_flux:
-    :param reciprocating_flux:
-    :param velocity:
-    :param ymin1:
-    :param ymax1:
-    :param label:
+    PLot directional probability flux and enzyme velocity as a function of substrate
+    concentration.
     """
     cmap = sns.color_palette("Paired", 10)
     fig = plt.figure(figsize=(6 * 1.2, 6))
@@ -282,24 +257,16 @@ def plot_directional_flux_and_velocity(concentrations, directional_flux, velocit
 def plot_flux_over_threshold(concentrations, number_above_thresholds, colors, names,
                              threshold_labels=None, xmin=10 ** -6, xmax=10 ** -2, ymin=0, ymax=140):
     """
-
-    :param concentrations:
-    :param number_above_thresholds:
-    :param colors:
-    :param names:
-    :param threshold_labels:
-    :param xmin:
-    :param xmax:
-    :param ymin:
-    :param ymax:
+    Plot the number of angles with probability flux over a certain threshold.
     """
     fig = plt.figure(figsize=(6 * 1.2, 6))
     gs = GridSpec(1, 1, wspace=0.2, hspace=0.5)
     ax = plt.subplot(gs[0, 0])
     linestyles = ['-', '--']
-    # For simplicity, I think I should enforce paired plotting. That is, to plot the number of angles over two
-    # thresholds for each system, with the line styles given above. We should be able to handle an arbitrary number of
-    # pairs.
+    # For simplicity, I think I should enforce paired plotting. That is, to
+    # plot the number of angles over two thresholds for each system, with the
+    # line styles given above. We should be able to handle an arbitrary number
+    # of pairs.
     pairs = [number_above_thresholds[x:x + 2]
              for x in range(0, len(number_above_thresholds), 2)]
     for system, color, name in zip(pairs, colors, names):
@@ -330,18 +297,7 @@ def plot_load_over_threshold(concentrations, number_above_thresholds, colors, na
                              annotation=None, annotation_x=None, annotation_y=None,
                              xmin=10 ** -6, xmax=10 ** -2, ymin=0, ymax=140):
     """
-
-    :param concentrations:
-    :param number_above_thresholds:
-    :param colors:
-    :param names:
-    :param annotation:
-    :param annotation_x:
-    :param annotation_y:
-    :param xmin:
-    :param xmax:
-    :param ymin:
-    :param ymax:
+    Plot the number of angles with stall force (i.e., load) over a certain threshold.
     """
     fig = plt.figure(figsize=(6 * 1.2, 6))
     gs = GridSpec(1, 1, wspace=0.2, hspace=0.5)
@@ -363,70 +319,37 @@ def plot_load_over_threshold(concentrations, number_above_thresholds, colors, na
     paper_plot(fig)
 
 
-# Below, these helper functions are necessary for the summary plots that are designed mostly to read in pandas
-# dataframes
-def return_concentration_slice(df, concentration):
+def plot_histograms(df, concentration, color):
     """
-    This helper function makes slicing dataframes easy.
-    :param df: a dataframe that contains a column named 'Concentration'
-    :param concentration: a target concentration, that will be rounded
-    :return: the dataframe slice at the given concentration
-    """
-    tmp = df[np.round(df['Concentration'], 1) == np.round(concentration, 1)]
-    return tmp
-
-
-def return_fluxes_and_velocity(protein, name, concentrations, catalytic_rate=None,
-                               directory=None):
-    """
-    This helper function will return the turnover rate and the fluxes over a concentration range.
-    :param protein: one of the recognized protein systems in the class
-    :param name: filename of the torsion
-    :param concentrations: a list concentrations
-    :return:
-    """
-    directional_flux, reciprocating_flux, velocity = [], [], []
-    for concentration in concentrations:
-        this = Simulation(data_source=protein)
-        this.name = name
-        this.cSubstrate = concentration
-        if catalytic_rate:
-            this.catalytic_rate = catalytic_rate
-        this.simulate(directory=directory)
-        directional_flux.append(np.mean(this.flux_u + this.flux_b))
-        reciprocating_flux.append(
-            np.max(np.hstack((abs(this.flux_u), abs(this.flux_b)))))
-        velocity.append(
-            np.sum(this.ss[this.bins:2 * this.bins]) * this.catalytic_rate)
-    return directional_flux, reciprocating_flux, velocity
-
-
-def find_above_threshold(df, quantity, threshold):
+    Plot histogram of the directional flux values for a given concentration.
     """
 
-    :param df:
-    :param quantity:
-    :param threshold:
-    :return:
-    """
-    concentrations = []
-    number_above_threshold = []
-    for concentration in tqdm(np.unique(df['Concentration'].values)):
-        tmp = return_concentration_slice(df, concentration)
-        concentrations.append(10 ** concentration)
-        number_above_threshold.append(
-            sum(tmp[str(quantity)].abs() > threshold))
-    return concentrations, number_above_threshold
+    tmp = return_concentration_slice(df, concentration)
+    flux = tmp['Directional flux'].abs().values
+    hist, bin_edges = np.histogram(flux, bins=20)
+    mids = bin_edges[1:] - np.diff(bin_edges)/2
+    print('Edge, Edge, Count')
+    for i in range(len(hist)):
+        print(bin_edges[i], bin_edges[i+1], hist[i])
+    fig = plt.figure(figsize=(6 * 1.2, 6))
+    gs = GridSpec(1, 1, wspace=0.2, hspace=0.5)
+    ax = plt.subplot(gs[0, 0])
+    rects = ax.bar(mids, hist, width=10, color=color)
+    def autolabel(rects):
+        for rect in rects:
+            height = rect.get_height()
+            i = rects.index(rect)
+            plt.text(rect.get_x()+rect.get_width()/2., 1.05*height, '{}'.format(int(height)),
+                    ha='center', va='bottom')
+    autolabel(rects)
+    ax.set_ylabel('Count')
+    ax.set_xlabel('Directional flux (cycle s$^{{-1}}$)')
+    paper_plot(fig)
 
 
 def data_frame_to_chimera(df, df_index_column, df_target_column, filename, chimera_label):
     """
-
-    :param df:
-    :param df_index_column:
-    :param df_target_column:
-    :param filename:
-    :param chimera_label:
+    Write out flux data so it can be used for visualization.
     """
     file = str(filename) + '.dat'
     f = open(file, 'w')

@@ -7,6 +7,8 @@ def saw(x, a):
 
 
 def variable_saw(y, x, a):
+    """Return a sawtooth wave, specified by the position and period, with a
+    mangitude parameter."""
     return y * (x / a - np.floor(1 / 2 + x / a))
 
 
