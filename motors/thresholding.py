@@ -7,6 +7,8 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
+from motors.analysis import return_concentration_slice
+
 def find_above_threshold(df, quantity, threshold):
     concentrations = []
     number_above_threshold = []
