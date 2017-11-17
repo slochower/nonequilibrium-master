@@ -10,7 +10,7 @@ from motors.simulation import Simulation
 
 def plot_input(this, save=False, filename=None):
     """
-    Plot the apo and bound histograms as a function of dihedral angle. 
+    Plot the apo and bound histograms as a function of dihedral angle.
     The input histograms are taken to be normalized populations derived from MD simulations.
     """
 
@@ -134,12 +134,12 @@ def plot_load(this, save=False, filename=None):
     fig = plt.figure(figsize=(6 * 1.2, 6))
     gs = GridSpec(1, 1, wspace=0.2, hspace=0.5)
     ax1 = plt.subplot(gs[0, 0])
-    ax1.plot(range(this.bins), [this.unbound_energy[i] + this.load_function(i) for i in range(this.bins)],
+    ax1.plot(range(this.bins), [this.unbound[i] + this.load_function(i) for i in range(this.bins)],
              c='k', ls='--', lw=2)
-    ax1.plot(range(this.bins), this.unbound_energy, c=this.unbound_clr)
-    ax1.plot(range(this.bins), [this.bound_energy[i] + this.load_function(i) for i in range(this.bins)],
+    ax1.plot(range(this.bins), this.unbound, c=this.unbound_clr)
+    ax1.plot(range(this.bins), [this.bound[i] + this.load_function(i) for i in range(this.bins)],
              c='k', ls='--', lw=2)
-    ax1.plot(range(this.bins), this.bound_energy, c=this.bound_clr, ls='--')
+    ax1.plot(range(this.bins), this.bound, c=this.bound_clr, ls='--')
 
     ax1.set_xticks([0, this.bins / 4, this.bins /
                     2, 3 * this.bins / 4, this.bins])
@@ -155,8 +155,8 @@ def plot_load(this, save=False, filename=None):
 def plot_fluxes_and_velocity(concentrations, directional_flux, reciprocating_flux, velocity,
                              ymin1=None, ymax1=None, label=None):
     """
-    Plot directional and reciprocating probability flux and enzyme velocity 
-    over a range of concentrations. 
+    Plot directional and reciprocating probability flux and enzyme velocity
+    over a range of concentrations.
     """
     cmap = sns.color_palette("Paired", 10)
     fig = plt.figure(figsize=(6 * 1.2, 6))
